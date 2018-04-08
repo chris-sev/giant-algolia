@@ -10,6 +10,9 @@
     -->
     <link rel="manifest" href="%PUBLIC_URL%/manifest.json">
     <link rel="shortcut icon" href="%PUBLIC_URL%/favicon.ico">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.6.2/css/bulma.min.css" />
+
     <!--
       Notice the use of %PUBLIC_URL% in the tags above.
       It will be replaced with the URL of the `public` folder during the build.
@@ -25,7 +28,31 @@
     <noscript>
       You need to enable JavaScript to run this app.
     </noscript>
-    <div id="root"></div>
+
+    <nav class="navbar" role="navigation" aria-label="main navigation">
+    <div class="container">
+      
+      <!-- logo -->
+      <div class="navbar-brand">
+        <a class="navbar-item" href="https://bulma.io">
+          <img src="https://bulma.io/images/bulma-logo.png" alt="Bulma: a modern CSS framework based on Flexbox" width="112" height="28">
+        </a>
+      </div>
+    
+      <!-- navbar right -->
+      <div class="navbar-menu">
+      <div class="navbar-end">
+
+        <div class="navbar-item">
+          <div id="react-search-bar"></div>
+        </div>
+
+      </div>
+      </div>
+
+    </div>
+    </nav>
+
     <!--
       This HTML file is a template.
       If you open it directly in the browser, you will see an empty page.

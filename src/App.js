@@ -1,17 +1,51 @@
 import React, { Component } from 'react';
-import { InstantSearch, Hits } from 'react-instantsearch/dom';
+import { InstantSearch, Hits, SearchBox } from 'react-instantsearch/dom';
 import 'instantsearch.css/themes/algolia.css';
 import './App.css';
+
+import { connectMenu, connectHits } from 'react-instantsearch/connectors';
+
+const VirtualMenu = connectMenu(() => null);
+const Tutorials = () => <VirtualMenu attribute="category" defaultRefinement="Tutorials" />;
+const BarTalk = () => <VirtualMenu attribute="category" defaultRefinement="Bar Talk" />;
+
+const CustomHits = connectHits(({ hits }) => {
+  return (
+    <div>
+      <Tutorials />
+
+      {hits.map(hit =>
+        <p key={hit.objectID}>
+          <Highlight attribute="description" hit={hit} />
+        </p>
+      )}
+    </div>
+  );
+}
+
 
 class App extends Component {
   render() {
     return (
       <InstantSearch
-          appId="latency"
-          apiKey="3d9875e51fbd20c7754e65422f7ce5e1"
-          indexName="bestbuy">
+        appId="4KRGXPTF7K"
+        apiKey="4594f3b07157188f25b3f5a8a7eba04e"
+        indexName="content_latest">
 
-        hello333
+        {/* search bar */}
+        <div className="search-bar">
+          <SearchBox />
+        </div>
+
+        {/* search hits */}
+        <div className="search-hits">
+          <div className="container">
+            <Tutorials />
+            <BarTalk />
+
+            <Hits />
+          </div>
+        </div>
 
       </InstantSearch>
     );
