@@ -4,5 +4,9 @@ import './index.css';
 import App from './App';
 import registerServiceWorker from './registerServiceWorker';
 
-ReactDOM.render(<App />, document.getElementById('react-search-bar'));
+ReactDOM.render(
+  <App />, 
+  document.getElementById('react-search-bar')
+);
+
 registerServiceWorker();
