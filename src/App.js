@@ -43,6 +43,8 @@ class App extends Component {
             <Tutorials />
             <BarTalk />
 
+
+            {/* TODO: maybe use multiple <Index> with refinements */}
             <Hits />
           </div>
         </div>
