@@ -2,3 +2,22 @@
   margin-top: 50px;
   margin-bottom: 10px;
 }
+
+.ais-SearchBox  {
+  position: relative;
+}
+
+.ais-SearchBox-input {
+  width: 100%;
+  background: #F2F2F2;
+  // box-shadow: 0 10px 40px 0 rgba(62,57,107,0.07), 0 2px 9px 0 rgba(62,57,107,0.06);
+  border: none;
+  border-radius: 5px;
+  outline: none;
+  padding: 30px;
+  font-size: 22px;
+}
+
+.ais-SearchBox-submitIcon   {
+  display: none;
+}

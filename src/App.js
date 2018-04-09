@@ -7,7 +7,7 @@ import './App.css';
 import { connectMenu } from 'react-instantsearch/connectors';
 
 const VirtualMenu = connectMenu(() => null);
-const BarTalk   = () => <VirtualMenu attribute="category" defaultRefinement="Bar Talk" />;
+const BarTalk     = () => <VirtualMenu attribute="category" defaultRefinement="Bar Talk" />;
 
 class App extends Component {
   render() {
@@ -39,13 +39,9 @@ class App extends Component {
             </Index>
 
             <div className="tag is-info">latest posts</div>
-            <Index indexName="content_local">
-              <Configure hitsPerPage={8} />
-              <Hits />
-            </Index>
-
-            {/* TODO: maybe use multiple <Index> with refinements */}
-            {/* <Hits /> */}
+            <Configure hitsPerPage={8} />
+            <Hits />
+            
           </div>
         </section>
 
