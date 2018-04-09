@@ -1,13 +1,12 @@
 import React, { Component } from 'react';
-import { InstantSearch, Index, Hits, SearchBox } from 'react-instantsearch/dom';
-import 'instantsearch.css/themes/algolia.css';
+import { InstantSearch, Index, Configure, Hits, SearchBox } from 'react-instantsearch/dom';
+import 'instantsearch.css/themes/reset.css';
 import 'bulma/css/bulma.css';
 import './App.css';
 
-import { connectMenu, connectHits } from 'react-instantsearch/connectors';
+import { connectMenu } from 'react-instantsearch/connectors';
 
 const VirtualMenu = connectMenu(() => null);
-const Tutorials = () => <VirtualMenu attribute="category" defaultRefinement="Tutorials" />;
 const BarTalk   = () => <VirtualMenu attribute="category" defaultRefinement="Bar Talk" />;
 
 class App extends Component {
@@ -18,32 +17,37 @@ class App extends Component {
         apiKey="4594f3b07157188f25b3f5a8a7eba04e"
         indexName="content_local">
 
-        {/* search bar */}
-        <div className="search-bar">
-          <SearchBox />
-        </div>
-
         {/* search hits */}
-        <div className="search-hits">
+        <section className="section search-hits">
           <div className="container">
 
-            tutorials
-            <Index indexName="content_local">
-              <Tutorials />
+            {/* search box */}
+            <div className="search-box">
+              <SearchBox />
+            </div>
+
+            <div className="tag is-danger">courses</div>
+            <Index indexName="courses_local">
+              <Configure hitsPerPage={4} />
               <Hits />
             </Index>
 
-            bar talk
-            <Index indexName="content_local">
-              <BarTalk />
+            <div className="tag is-warning">essential reading</div>
+            <Index indexName="essential_local">
+              <Configure hitsPerPage={4} />
               <Hits />
             </Index>
 
+            <div className="tag is-info">latest posts</div>
+            <Index indexName="content_local">
+              <Configure hitsPerPage={8} />
+              <Hits />
+            </Index>
 
             {/* TODO: maybe use multiple <Index> with refinements */}
             {/* <Hits /> */}
           </div>
-        </div>
+        </section>
 
       </InstantSearch>
     );
