@@ -13,16 +13,14 @@ import PostHits from './components/Posts/PostHits';
 class App extends Component {
 
   componentDidMount() {
-    const searchBox       = document.querySelector('.search-box');
-    const searchContainer = document.querySelector('.search-hits > .container');
+    // const searchBox       = document.querySelector('.ais-SearchBox');
+    // const searchContainer = document.querySelector('.search-hits > .container');
 
-    const containerWidth  = searchContainer.offsetWidth;
-    const containerTop    = searchContainer.getBoundingClientRect().top;
-    const containerLeft   = searchContainer.getBoundingClientRect().left;
+    // const containerWidth  = searchContainer.offsetWidth;
+    // const containerLeft   = searchContainer.getBoundingClientRect().left;
 
-    searchBox.style.width = `${containerWidth}px`;
-    // searchBox.style.top   = `${containerTop}px`;
-    searchBox.style.left  = `${containerLeft}px`;
+    // searchBox.style.width = `${containerWidth}px`;
+    // searchBox.style.left  = `${containerLeft}px`;
   }
 
   render() {
@@ -36,14 +34,16 @@ class App extends Component {
 
         <Configure distinct={1} hitsPerPage={6} />
 
+        {/* search box */}
+        <div className="section search-section search-box">
+          <div className="container">
+            <SearchBox />
+          </div>
+        </div>
+
         {/* search hits */}
         <section className="section search-hits">
           <div className="container">
-
-            {/* search box */}
-            <div className="search-section search-box">
-              <SearchBox />
-            </div>
 
             {/* guide and ad row */}
             <div className="search-section search-guides columns">

@@ -3,7 +3,7 @@ body {
   min-height: 100vh; }
 
 .search-hits {
-  padding-top: 200px;
+  padding-top: 250px;
   position: relative; }
 
 .columns {
@@ -49,8 +49,12 @@ body {
  */
 .search-box {
   position: fixed;
-  top: 100px;
+  left: 0;
+  right: 0;
+  background: #E7E7E7;
   z-index: 999; }
+  .search-box > .container {
+    position: relative; }
 
 .ais-SearchBox {
   position: relative; }
