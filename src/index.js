@@ -4,9 +4,10 @@ import './index.css';
 import App from './App';
 import registerServiceWorker from './registerServiceWorker';
 
+const reactSearch = document.getElementById('react-search');
 ReactDOM.render(
-  <App />, 
-  document.getElementById('react-search-bar')
+  <App {...reactSearch.dataset} />, 
+  reactSearch
 );
 
 registerServiceWorker();

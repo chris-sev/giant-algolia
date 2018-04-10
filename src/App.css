@@ -2,6 +2,9 @@
   margin-top: 50px;
   margin-bottom: 10px; }
 
+.search-box {
+  margin-bottom: 50px; }
+
 .ais-SearchBox {
   position: relative; }
 
@@ -14,5 +17,6 @@
   padding: 30px;
   font-size: 22px; }
 
-.ais-SearchBox-submitIcon {
+.ais-SearchBox-submitIcon,
+.ais-SearchBox-resetIcon {
   display: none; }
