@@ -9,7 +9,7 @@ import CourseCard from './CourseCard';
 const Hits = connectHits(({ hits }) => (
   <div className="columns is-multiline">
     {hits.map(hit =>
-      <div className="column is-3">
+      <div key={hit.id} className="column is-4">
         <CourseCard hit={hit} />
       </div>
     )}
@@ -25,7 +25,7 @@ const CourseHits = ({ environment }) => (
 
     {/* show the courses index */}
     <Index indexName={`courses_${environment}`}>
-      <Configure hitsPerPage={4} />
+      <Configure hitsPerPage={3} />
 
       {/* loop over the hits */}
       <Hits />

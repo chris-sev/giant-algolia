@@ -4,27 +4,13 @@ body    {
 }
 
 .tag  {
-  margin-top: 50px;
+  margin-top: 30px;
   margin-bottom: 10px;
 }
 
-/**
- * -------------------------------------------------------
- * Cards
- * -------------------------------------------------------
- */
-.card.is-scotch     {
+.ad   {
   border-radius: 5px;
-
-  .title            {
-    a               {
-      color: rgba(#000, 0.9);
-    }
-  }
-
-  .subtitle         {
-    color: rgba(#000, 0.5);
-  }
+  box-shadow: 0 2px 3px rgba(10, 10, 10, 0.1), 0 0 0 1px rgba(10, 10, 10, 0.1);
 }
 
 /**

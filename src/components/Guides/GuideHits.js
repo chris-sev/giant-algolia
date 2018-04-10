@@ -8,7 +8,7 @@ import GuideCard from './GuideCard';
  */
 const Hits = connectHits(({ hits }) => (
   <React.Fragment>  
-    {hits.map(hit => <GuideCard hit={hit} />)}
+    {hits.map(hit => <GuideCard key={hit.id} hit={hit} />)}
   </React.Fragment>
 ));
 

@@ -18,6 +18,8 @@ const GuideCard = ({ hit }) => {
           <h3 className="subtitle">The ultimate noob guide to learn</h3>
           <h2 className="title"><a href={url}>{title}</a></h2>
         </div>
+
+        {/* call to action */}
         <div>
           <a className="button is-large is-danger is-rounded" url={url}>
             Learn Angular

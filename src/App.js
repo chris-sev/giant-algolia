@@ -3,6 +3,7 @@ import { InstantSearch, Configure, SearchBox } from 'react-instantsearch/dom';
 import 'instantsearch.css/themes/reset.css';
 import 'bulma/css/bulma.css';
 import './App.css';
+import './components/Card.css';
 
 import GuideHits from './components/Guides/GuideHits';
 import CourseHits from './components/Courses/CourseHits';
@@ -28,16 +29,19 @@ class App extends Component {
               <SearchBox />
             </div>
 
-            {/* guides */}
+            {/* guide and ad row */}
             <div className="columns">
               <div className="column">
+
+                {/* guides */}
                 <GuideHits environment={environment} />
+                
               </div>
               <div className="column is-narrow">
-                <img 
-                  alt="Ad"
-                  src="https://placeimg.com/300/250/any" 
-                  style={{ borderRadius: '5px', boxShadow: '0 2px 3px rgba(10, 10, 10, 0.1), 0 0 0 1px rgba(10, 10, 10, 0.1)' }} />
+
+                {/* ad */}
+                <img alt="Ad" src="https://placeimg.com/300/250/any" className="ad" />
+
               </div>
             </div>
 
@@ -45,14 +49,7 @@ class App extends Component {
             <CourseHits environment={environment} />
 
             {/* essential */}
-            {/* <div className="search-section search-essential">
-              <div className="tag is-warning">essential reading</div>
-
-              <Index indexName="essential_local">
-                <Configure hitsPerPage={4} />
-                <CardGrid columnClass={'is-3'} />
-              </Index>
-            </div> */}
+            {/* <EssentialHits environment={environment} /> */}
 
             {/* posts */}
             {/* <div className="search-section search-posts">

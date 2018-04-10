@@ -1,0 +1,32 @@
+/**
+ * -------------------------------------------------------
+ * Cards
+ * -------------------------------------------------------
+ */
+
+.card.is-scotch     {
+  border-radius: 5px;
+  height: 100%;
+
+  .card-content     {
+    padding: 20px 25px;
+  }
+
+  .title            {
+    font-size: 18px;
+    line-height: 1.5;
+
+    a               {
+      color: rgba(#000, 0.8);
+      transition: 0.3s color;
+
+      &:hover       {
+        color: rgba(#000, 0.6);
+      }
+    }
+  }
+
+  .subtitle         {
+    color: rgba(#000, 0.5);
+  }
+}

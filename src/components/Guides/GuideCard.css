@@ -11,6 +11,9 @@
     align-items: center;
     justify-content: space-around;
     padding-left: 150px; }
+  .card.is-guide .title {
+    font-size: 30px;
+    line-height: 1.5; }
   .card.is-guide .subtitle {
     line-height: 1.5;
     margin-bottom: 30px;

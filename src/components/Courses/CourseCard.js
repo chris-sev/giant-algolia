@@ -1,4 +1,6 @@
 import React from 'react';
+import CardImage from '../CardImage';
+import './CourseCard.css';
 
 const CourseCard = ({ hit }) => {
   const url   = '';
@@ -7,7 +9,7 @@ const CourseCard = ({ hit }) => {
   return (
     <div className="card is-scotch">    
       {/* image */}
-      {/* <CardImage /> */}
+      <CardImage article={hit} showPlayButton={true} />
 
       {/* content */}
       <div className="card-content">

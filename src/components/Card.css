@@ -1,0 +1,20 @@
+/**
+ * -------------------------------------------------------
+ * Cards
+ * -------------------------------------------------------
+ */
+.card.is-scotch {
+  border-radius: 5px;
+  height: 100%; }
+  .card.is-scotch .card-content {
+    padding: 20px 25px; }
+  .card.is-scotch .title {
+    font-size: 18px;
+    line-height: 1.5; }
+    .card.is-scotch .title a {
+      color: rgba(0, 0, 0, 0.8);
+      transition: 0.3s color; }
+      .card.is-scotch .title a:hover {
+        color: rgba(0, 0, 0, 0.6); }
+  .card.is-scotch .subtitle {
+    color: rgba(0, 0, 0, 0.5); }

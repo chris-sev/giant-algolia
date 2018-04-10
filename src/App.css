@@ -3,20 +3,12 @@ body {
   min-height: 100vh; }
 
 .tag {
-  margin-top: 50px;
+  margin-top: 30px;
   margin-bottom: 10px; }
 
-/**
- * -------------------------------------------------------
- * Cards
- * -------------------------------------------------------
- */
-.card.is-scotch {
-  border-radius: 5px; }
-  .card.is-scotch .title a {
-    color: rgba(0, 0, 0, 0.9); }
-  .card.is-scotch .subtitle {
-    color: rgba(0, 0, 0, 0.5); }
+.ad {
+  border-radius: 5px;
+  box-shadow: 0 2px 3px rgba(10, 10, 10, 0.1), 0 0 0 1px rgba(10, 10, 10, 0.1); }
 
 /**
  * -------------------------------------------------------
