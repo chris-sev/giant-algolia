@@ -13,10 +13,11 @@
       .lesson-list .lesson-item:hover .title {
         color: #2c84b9; }
     .lesson-list .lesson-item .lock {
-      margin-right: 4px;
+      margin-right: 6px;
       margin-top: 1px; }
     .lesson-list .lesson-item .title {
-      margin: 0; }
+      margin: 0;
+      color: rgba(0, 0, 0, 0.65); }
     .lesson-list .lesson-item .actions {
       margin-left: auto;
       color: #BBB; }

@@ -22,11 +22,11 @@ const Hits = connectHits(({ hits }) => {
 /**
  * The course hits will search the courses index
  */
-const CourseHits = ({ environment }) => (
+const PostHits = ({ environment }) => (
   <div className="search-section search-courses">
     <div className="tag is-info">latest posts</div>
     <Hits />
   </div>
 );
 
-export default CourseHits;
+export default PostHits;
