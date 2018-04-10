@@ -5,13 +5,38 @@ body {
 .columns {
   margin-bottom: 0 !important; }
 
-.tag {
-  margin-top: 40px;
-  margin-bottom: 10px; }
+.search-guides > .column {
+  margin-bottom: 0 !important; }
 
 .ad {
   border-radius: 5px;
   box-shadow: 0 2px 3px rgba(10, 10, 10, 0.1), 0 0 0 1px rgba(10, 10, 10, 0.1); }
+
+.section-title {
+  margin-top: 60px;
+  font-family: 'IBM Plex Sans';
+  color: rgba(0, 0, 0, 0.7);
+  font-size: 30px;
+  position: relative;
+  display: flex;
+  align-items: center; }
+  .section-title:before {
+    content: '';
+    display: block;
+    border-radius: 50%;
+    width: 15px;
+    height: 15px;
+    margin-top: 1px;
+    margin-right: 10px; }
+
+.search-courses .section-title:before {
+  background-image: linear-gradient(80deg, #fc4a1a, #f7b733); }
+
+.search-essential .section-title:before {
+  background-image: linear-gradient(80deg, #ad5389, #3c1053); }
+
+.search-posts .section-title:before {
+  background-image: linear-gradient(80deg, #00D8FF, #00A7FF); }
 
 /**
  * -------------------------------------------------------

@@ -7,6 +7,7 @@ import './components/Card.css';
 
 import GuideHits from './components/Guides/GuideHits';
 import CourseHits from './components/Courses/CourseHits';
+import EssentialHits from './components/Posts/EssentialHits';
 import PostHits from './components/Posts/PostHits';
 
 class App extends Component {
@@ -31,8 +32,8 @@ class App extends Component {
             </div>
 
             {/* guide and ad row */}
-            <div className="columns">
-              <div className="column" style={{ marginBottom: 0 }}>
+            <div className="search-section search-guides columns">
+              <div className="column">
 
                 {/* guides */}
                 <GuideHits environment={environment} />
@@ -50,10 +51,10 @@ class App extends Component {
             <CourseHits environment={environment} />
 
             {/* essential */}
-            {/* <EssentialHits environment={environment} /> */}
+            <EssentialHits environment={environment} />
 
             {/* posts */}
-            <PostHits />
+            <PostHits environment={environment} />
             
           </div>
         </section>

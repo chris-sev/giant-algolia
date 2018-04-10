@@ -23,8 +23,8 @@ const Hits = connectHits(({ hits }) => {
  * The course hits will search the courses index
  */
 const PostHits = ({ environment }) => (
-  <div className="search-section search-courses">
-    <div className="tag is-info">latest posts</div>
+  <div className="search-section search-posts">
+    <h3 className="title section-title">Latest Posts</h3>
     <Hits />
   </div>
 );

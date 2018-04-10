@@ -51,7 +51,7 @@ const Hits = connectHits(({ hits }) => {
  */
 const CourseHits = ({ environment }) => (
   <div className="search-section search-courses">
-    <div className="tag is-danger">courses</div>
+    <h3 className="title section-title">Courses</h3>
 
     {/* show the courses index */}
     <Index indexName={`lessons_${environment}`}>
