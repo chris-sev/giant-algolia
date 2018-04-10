@@ -4,9 +4,9 @@ body    {
 }
 
 .search-hits  {
-  padding-top: 250px;
+  padding-top: 200px;
   position: relative;
-}
+} 
 
 .columns  {
   margin-bottom: 0 !important;
@@ -60,6 +60,7 @@ body    {
  */
 .search-box     {
   position: fixed;
+  top: 100px;
   z-index: 999;
 }
 

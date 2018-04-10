@@ -21,7 +21,7 @@ class App extends Component {
     const containerLeft   = searchContainer.getBoundingClientRect().left;
 
     searchBox.style.width = `${containerWidth}px`;
-    searchBox.style.top   = `${containerTop}px`;
+    // searchBox.style.top   = `${containerTop}px`;
     searchBox.style.left  = `${containerLeft}px`;
   }
 
