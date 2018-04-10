@@ -7,6 +7,7 @@ import './components/Card.css';
 
 import GuideHits from './components/Guides/GuideHits';
 import CourseHits from './components/Courses/CourseHits';
+import LessonHits from './components/Lessons/LessonHits';
 
 class App extends Component {
   render() {
@@ -45,8 +46,9 @@ class App extends Component {
               </div>
             </div>
 
-            {/* courses */}
-            <CourseHits environment={environment} />
+            {/* courses with lessons inside of them */}
+            <LessonHits environment={environment} />
+            {/* <CourseHits environment={environment} /> */}
 
             {/* essential */}
             {/* <EssentialHits environment={environment} /> */}

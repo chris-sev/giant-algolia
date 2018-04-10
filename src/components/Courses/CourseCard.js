@@ -2,24 +2,24 @@ import React from 'react';
 import CardImage from '../CardImage';
 import './CourseCard.css';
 
-const CourseCard = ({ hit }) => {
-  const url   = '';
-  const title = hit.title;
+const CourseCard = ({ course }) => {
+  const { title, link, lessons } = course;
 
   return (
-    <div className="card is-scotch">    
+    <div className="card is-scotch">
       {/* image */}
-      <CardImage article={hit} showPlayButton={true} />
+      <CardImage article={course} showPlayButton={true} />
 
       {/* content */}
       <div className="card-content">
 
         {/* title */}
-        <h2 className="title"><a href={url}>{title}</a></h2>
+        <h2 className="title"><a href={link}>{title}</a></h2>
 
       </div>
 
       {/* footer */}
+      <CourseCardLessons lessons={lessons} />
       {/* <CardFooter /> */}
     </div>
   )
