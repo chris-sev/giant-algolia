@@ -1,8 +1,37 @@
+body    {
+  background: #F5F5F5;
+  min-height: 100vh;
+}
+
 .tag  {
   margin-top: 50px;
   margin-bottom: 10px;
 }
 
+/**
+ * -------------------------------------------------------
+ * Cards
+ * -------------------------------------------------------
+ */
+.card.is-scotch     {
+  border-radius: 5px;
+
+  .title            {
+    a               {
+      color: rgba(#000, 0.9);
+    }
+  }
+
+  .subtitle         {
+    color: rgba(#000, 0.5);
+  }
+}
+
+/**
+ * -------------------------------------------------------
+ * Search box
+ * -------------------------------------------------------
+ */
 .search-box     {
   margin-bottom: 50px;
 }
@@ -13,8 +42,8 @@
 
 .ais-SearchBox-input {
   width: 100%;
-  background: #F2F2F2;
-  // box-shadow: 0 10px 40px 0 rgba(62,57,107,0.07), 0 2px 9px 0 rgba(62,57,107,0.06);
+  background: #FFF;
+  box-shadow: 0 2px 3px rgba(10, 10, 10, 0.1), 0 0 0 1px rgba(10, 10, 10, 0.1);
   border: none;
   border-radius: 5px;
   outline: none;

@@ -1,0 +1,27 @@
+.card.is-guide {
+  min-height: 250px;
+  display: flex;
+  align-items: center;
+  background-repeat: no-repeat;
+  background-position: -50px center;
+  background-size: 25%; }
+  .card.is-guide .card-content {
+    display: flex;
+    width: 100%;
+    align-items: center;
+    justify-content: space-around;
+    padding-left: 150px; }
+  .card.is-guide .subtitle {
+    line-height: 1.5;
+    margin-bottom: 30px;
+    margin-top: 0;
+    display: block; }
+  .card.is-guide .button {
+    position: relative; }
+    .card.is-guide .button span {
+      position: absolute;
+      font-size: 16px;
+      transform: rotate(-10deg);
+      top: -23px;
+      right: -70px;
+      color: rgba(0, 0, 0, 0.8); }

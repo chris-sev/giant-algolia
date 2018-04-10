@@ -12,13 +12,22 @@ const Hits = connectHits(({ hits }) => (
   </React.Fragment>
 ));
 
-const GuideHits = () => (
-  <div className="search-section search-guides">
-    <Index indexName="guides_local">
-      <Configure hitsPerPage={1} />
-      <Hits />
-    </Index>
-  </div>
-);
+/**
+ * Render the guides search from the guides Algolia index
+ */
+const GuideHits = ({ environment }) => {
+  const index = `guides_${environment}`;
+  
+  return (
+    <div className="search-section search-guides">
+
+      <Index indexName={index}>
+        <Configure hitsPerPage={1} />
+        <Hits />
+      </Index>
+
+    </div>
+  );
+};
 
 export default GuideHits;

@@ -1,10 +1,11 @@
 import React from 'react';
 
 const CourseCard = ({ hit }) => {
-  const url = '';
+  const url   = '';
+  const title = hit.title;
 
   return (
-    <div className="card scotch-card">    
+    <div className="card is-scotch">    
       {/* image */}
       {/* <CardImage /> */}
 
@@ -12,7 +13,7 @@ const CourseCard = ({ hit }) => {
       <div className="card-content">
 
         {/* title */}
-        <h2 className="title is-4"><a href={url}>{hit.title}</a></h2>
+        <h2 className="title"><a href={url}>{title}</a></h2>
 
       </div>
 
