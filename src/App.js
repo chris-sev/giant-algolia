@@ -11,6 +11,20 @@ import EssentialHits from './components/Posts/EssentialHits';
 import PostHits from './components/Posts/PostHits';
 
 class App extends Component {
+
+  componentDidMount() {
+    const searchBox       = document.querySelector('.search-box');
+    const searchContainer = document.querySelector('.search-hits > .container');
+
+    const containerWidth  = searchContainer.offsetWidth;
+    const containerTop    = searchContainer.getBoundingClientRect().top;
+    const containerLeft   = searchContainer.getBoundingClientRect().left;
+
+    searchBox.style.width = `${containerWidth}px`;
+    searchBox.style.top   = `${containerTop}px`;
+    searchBox.style.left  = `${containerLeft}px`;
+  }
+
   render() {
     const { environment } = this.props;
 

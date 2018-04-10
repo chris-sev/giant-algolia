@@ -2,6 +2,10 @@ body {
   background: #F5F5F5;
   min-height: 100vh; }
 
+.search-hits {
+  padding-top: 250px;
+  position: relative; }
+
 .columns {
   margin-bottom: 0 !important; }
 
@@ -44,7 +48,8 @@ body {
  * -------------------------------------------------------
  */
 .search-box {
-  margin-bottom: 50px; }
+  position: fixed;
+  z-index: 999; }
 
 .ais-SearchBox {
   position: relative; }
