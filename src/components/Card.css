@@ -18,3 +18,7 @@
         color: rgba(0, 0, 0, 0.6); }
   .card.is-scotch .subtitle {
     color: rgba(0, 0, 0, 0.5); }
+  .card.is-scotch .card-footer {
+    border: none;
+    border-bottom-left-radius: 5px;
+    border-bottom-right-radius: 5px; }

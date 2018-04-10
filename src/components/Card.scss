@@ -29,4 +29,10 @@
   .subtitle         {
     color: rgba(#000, 0.5);
   }
+
+  .card-footer    {
+    border: none;
+    border-bottom-left-radius: 5px;
+    border-bottom-right-radius: 5px;
+  }
 }

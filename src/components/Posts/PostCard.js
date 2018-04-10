@@ -1,25 +1,24 @@
 import React from 'react';
-import CardImage from './CardImage';
-import CardFooter from './CardFooter';
+import CardImage from '../CardImage';
 
-const PostCard = ({ hit }) => {
+const PostCard = ({ post }) => {
   const url = '';
+  const title = post.title || '';
 
   return (
-    <div className="card scotch-card">    
+    <div className="card is-scotch">    
       {/* image */}
-      <CardImage />
+      <CardImage article={post} />
 
       {/* content */}
       <div className="card-content">
 
         {/* title */}
-        <h2 className="title is-4"><a href={url}>{hit.title}</a></h2>
+        <h2 className="title is-4"><a href={url}>{title}</a></h2>
 
       </div>
 
       {/* footer */}
-      <CardFooter />
     </div>
   )
 };

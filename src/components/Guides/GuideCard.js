@@ -2,9 +2,9 @@ import React from 'react';
 import './GuideCard.css';
 import angularLogo from '../../angular.png';
 
-const GuideCard = ({ hit }) => {
+const GuideCard = ({ guide }) => {
   const url   = '';
-  const title = hit.title;
+  const title = guide.title;
   const cardStyles = { backgroundImage: `url(${angularLogo})` };
 
   return (

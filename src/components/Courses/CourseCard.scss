@@ -1,3 +1,32 @@
 .card.is-course     {
+  display: flex;
+  flex-direction: column;
+
+  .card-content, .card-footer   {
+    width: 100%;
+  }
   
+  .card-content     {
+    .title  {
+      margin-bottom: 8px;
+    }
+
+    p       {
+      color: rgba(#000, 0.5);
+    }
+  }
+
+  .lesson-list      {
+    margin-bottom: 20px;
+  }
+
+  .card-footer      {
+    margin-top: auto;
+    background: #F8F8F8;
+    color: #999;
+    padding: 15px 25px 18px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
 }

@@ -1,0 +1,39 @@
+.lesson-list    {
+  padding: 0 15px;
+
+  .lesson-item  {
+    display: flex;
+    align-items: center;
+    line-height: 1;
+    padding: 12px 10px;
+    transition: 0.3s ease background;
+    border-radius: 5px;
+    font-size: 12px;
+
+    &:hover     {
+      background: #EAF4FA;
+
+      .title    {
+        color: darken(#EAF4FA, 50%);
+      }
+    }
+
+    .lock       {
+      margin-right: 4px;
+      margin-top: 1px;
+    }
+
+    .title      {
+      margin: 0;
+    }
+
+    .actions    {
+      margin-left: auto;
+      color: #BBB;
+
+      span:not(:last-child) {
+        margin-right: 8px;
+      }
+    }
+  }
+}

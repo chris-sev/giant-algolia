@@ -1,0 +1,19 @@
+.card.is-course {
+  display: flex;
+  flex-direction: column; }
+  .card.is-course .card-content, .card.is-course .card-footer {
+    width: 100%; }
+  .card.is-course .card-content .title {
+    margin-bottom: 8px; }
+  .card.is-course .card-content p {
+    color: rgba(0, 0, 0, 0.5); }
+  .card.is-course .lesson-list {
+    margin-bottom: 20px; }
+  .card.is-course .card-footer {
+    margin-top: auto;
+    background: #F8F8F8;
+    color: #999;
+    padding: 15px 25px 18px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between; }
