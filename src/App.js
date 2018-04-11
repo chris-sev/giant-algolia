@@ -3,8 +3,9 @@ import { InstantSearch, Configure, SearchBox } from 'react-instantsearch/dom';
 import 'instantsearch.css/themes/reset.css';
 import 'bulma/css/bulma.css';
 import './App.css';
-import './components/Card.css';
+import './components/Cards/Card.css';
 
+import SearchSection from './components/SearchSection';
 import Searchspy from './components/Searchspy';
 import GuideHits from './components/Guides/GuideHits';
 import CourseHits from './components/Courses/CourseHits';
@@ -24,15 +25,7 @@ class App extends Component {
         <Configure distinct={1} hitsPerPage={6} />
 
         {/* search box */}
-        <div className="section search-section search-box">
-          <div className="container">
-            <SearchBox />
-
-            <div className="search-box-extras">
-              <Searchspy />
-            </div>
-          </div>
-        </div>
+        <SearchSection />
 
         {/* search hits */}
         <section className="section search-hits">
@@ -41,16 +34,12 @@ class App extends Component {
             {/* guide and ad row */}
             <div id="guide-section" className="search-section search-guides columns">
               <div className="column">
-
                 {/* guides */}
                 <GuideHits environment={environment} />
-                
               </div>
               <div className="column is-narrow">
-
                 {/* ad */}
                 <img alt="Ad" src="https://placeimg.com/300/250/any" className="ad" />
-
               </div>
             </div>
 
