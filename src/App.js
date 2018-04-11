@@ -5,24 +5,13 @@ import 'bulma/css/bulma.css';
 import './App.css';
 import './components/Card.css';
 
+import Searchspy from './components/Searchspy';
 import GuideHits from './components/Guides/GuideHits';
 import CourseHits from './components/Courses/CourseHits';
 import EssentialHits from './components/Posts/EssentialHits';
 import PostHits from './components/Posts/PostHits';
 
 class App extends Component {
-
-  componentDidMount() {
-    // const searchBox       = document.querySelector('.ais-SearchBox');
-    // const searchContainer = document.querySelector('.search-hits > .container');
-
-    // const containerWidth  = searchContainer.offsetWidth;
-    // const containerLeft   = searchContainer.getBoundingClientRect().left;
-
-    // searchBox.style.width = `${containerWidth}px`;
-    // searchBox.style.left  = `${containerLeft}px`;
-  }
-
   render() {
     const { environment } = this.props;
 
@@ -38,6 +27,10 @@ class App extends Component {
         <div className="section search-section search-box">
           <div className="container">
             <SearchBox />
+
+            <div className="search-box-extras">
+              <Searchspy />
+            </div>
           </div>
         </div>
 
@@ -46,7 +39,7 @@ class App extends Component {
           <div className="container">
 
             {/* guide and ad row */}
-            <div className="search-section search-guides columns">
+            <div id="guide-section" className="search-section search-guides columns">
               <div className="column">
 
                 {/* guides */}
@@ -62,13 +55,19 @@ class App extends Component {
             </div>
 
             {/* courses with lessons inside of them */}
-            <CourseHits environment={environment} />
+            <div id="course-section">
+              <CourseHits environment={environment} />
+            </div>
 
             {/* essential */}
-            <EssentialHits environment={environment} />
+            <div id="essential-section">
+              <EssentialHits environment={environment} />
+            </div>
 
             {/* posts */}
-            <PostHits environment={environment} />
+            <div id="posts-section">
+              <PostHits environment={environment} />
+            </div>
             
           </div>
         </section>
