@@ -4,7 +4,7 @@ body    {
 }
 
 .search-hits  {
-  padding-top: 250px;
+  padding-top: 150px;
   position: relative;
 } 
 
@@ -64,6 +64,8 @@ body    {
   right: 0;
   background: #E7E7E7;
   z-index: 999;
+  padding-bottom: 20px;
+  padding-top: 20px;
 
   > .container  {
     position: relative;
@@ -81,7 +83,7 @@ body    {
   border: none;
   border-radius: 5px;
   outline: none;
-  padding: 30px;
+  padding: 15px 20px;
   font-size: 22px;
 }
 

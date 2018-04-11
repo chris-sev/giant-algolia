@@ -3,7 +3,7 @@ body {
   min-height: 100vh; }
 
 .search-hits {
-  padding-top: 250px;
+  padding-top: 150px;
   position: relative; }
 
 .columns {
@@ -52,7 +52,9 @@ body {
   left: 0;
   right: 0;
   background: #E7E7E7;
-  z-index: 999; }
+  z-index: 999;
+  padding-bottom: 20px;
+  padding-top: 20px; }
   .search-box > .container {
     position: relative; }
 
@@ -66,7 +68,7 @@ body {
   border: none;
   border-radius: 5px;
   outline: none;
-  padding: 30px;
+  padding: 15px 20px;
   font-size: 22px; }
 
 .ais-SearchBox-submitIcon,
