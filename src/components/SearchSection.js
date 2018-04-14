@@ -1,5 +1,5 @@
 import React from 'react';
-import SearchBox from 'react-instantsearch/dom';
+import { SearchBox } from 'react-instantsearch/dom';
 import Searchspy from './Searchspy';
 
 const SearchSection = () => (
@@ -8,7 +8,7 @@ const SearchSection = () => (
       <SearchBox />
 
       <div className="search-box-extras">
-        {/* <Searchspy /> */}
+        <Searchspy />
       </div>
     </div>
   </div>

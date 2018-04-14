@@ -1,12 +1,11 @@
 import React, { Component } from 'react';
-import { InstantSearch, Configure, SearchBox } from 'react-instantsearch/dom';
+import { InstantSearch, Configure } from 'react-instantsearch/dom';
 import 'instantsearch.css/themes/reset.css';
 import 'bulma/css/bulma.css';
 import './App.css';
 import './components/Cards/Card.css';
 
 import SearchSection from './components/SearchSection';
-import Searchspy from './components/Searchspy';
 import GuideHits from './components/Guides/GuideHits';
 import CourseHits from './components/Courses/CourseHits';
 import EssentialHits from './components/Posts/EssentialHits';
