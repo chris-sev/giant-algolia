@@ -22,7 +22,7 @@ const Hits = connectHits(({ hits }) => (
  * The course hits will search the courses index
  */
 const PostHits = ({ environment }) => (
-  <div className="search-section search-essential">
+  <div id="essential-section" className="search-section search-essential">
     <h3 className="title section-title">Essential Reading</h3>
     <Index indexName={`essential_${environment}`}>
       <Configure hitsPerPage={3} distinct={3} />

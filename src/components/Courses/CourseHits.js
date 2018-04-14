@@ -50,7 +50,7 @@ const Hits = connectHits(({ hits }) => {
  * The course hits will search the courses index
  */
 const CourseHits = ({ environment }) => (
-  <div className="search-section search-courses">
+  <div id="course-section" className="search-section search-courses">
     <h3 className="title section-title">Courses</h3>
 
     {/* show the courses index */}

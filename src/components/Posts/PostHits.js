@@ -4,6 +4,15 @@ import PostCard from './PostCard';
 import './PostHits.css';
 
 /**
+ * Quick component to render an ad
+ */
+const Ad = () => (
+  <div className="is-flex-centered">
+    <img alt="Ad" src="https://placeimg.com/300/250/any" className="ad" />
+  </div>
+);
+
+/**
  * Create the hits loop so we can add our own column and grid classes
  * We're going to group our lessons by their course
  * We'll show a course card and lessons within that card as a list
@@ -11,21 +20,17 @@ import './PostHits.css';
 const InfiniteHits = connectInfiniteHits(({ hits, refine }) => (
   <React.Fragment>
     {/* article grid */}
-    <div className="columns is-multiline">
-
-      {/* show an ad if the index is divisible by 12 */}
+    <div className="columns is-multiline">    
+      {/* show an ad if the index is divisible by 9 (and not the first hit) */}
       {/* otherwise, show the card */}
       {hits.map((hit, index) => (
         <div key={hit.id} className="column is-3">
-          {(index !== 0 && index % 9 === 0) ? (
-            <div className="is-flex-centered">
-              <img alt="Ad" src="https://placeimg.com/300/250/any" className="ad" />
-            </div>
-          ):(
-            <PostCard post={hit} />
-          )}
+          {(index !== 0 && index % 9 === 0) 
+            ? <Ad />
+            : <PostCard post={hit} />
+          }
         </div>
-      ))}
+      ))}      
     </div>
 
     {/* read more button */}
@@ -39,7 +44,7 @@ const InfiniteHits = connectInfiniteHits(({ hits, refine }) => (
  * The course hits will search the courses index
  */
 const PostHits = ({ environment }) => (
-  <div className="search-section search-posts">
+  <div id="posts-section" className="search-section search-posts">
     <h3 className="title section-title">Latest Posts</h3>
     <InfiniteHits />
   </div>

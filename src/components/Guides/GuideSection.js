@@ -2,7 +2,7 @@ import React from 'react';
 import GuideHits from './GuideHits';
 
 const GuideSection = ({ environment }) => (
-  <div className="search-section search-guides columns">
+  <div id="guide-section" className="search-section search-guides columns">
     <div className="column">
       {/* guides */}
       <GuideHits environment={environment} />

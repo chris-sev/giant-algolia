@@ -1,11 +1,5 @@
 import React, { Component } from 'react';
-import { 
-  InstantSearch, 
-  Configure, 
-  Pagination,
-  ScrollTo, 
-  Hits
-} from 'react-instantsearch/dom';
+import { InstantSearch, Configure } from 'react-instantsearch/dom';
 
 import 'instantsearch.css/themes/reset.css';
 import 'bulma/css/bulma.css';
@@ -17,6 +11,12 @@ import GuideSection from './components/Guides/GuideSection';
 import CourseHits from './components/Courses/CourseHits';
 import EssentialHits from './components/Posts/EssentialHits';
 import PostHits from './components/Posts/PostHits';
+
+const Ad = () => (
+  <div className="is-flex-centered" style={{ marginTop: '60px' }}>
+    <img alt="Ad" src="https://placeimg.com/728/90/any" className="ad" />
+  </div>
+);
 
 class App extends Component {
   render() {
@@ -37,30 +37,12 @@ class App extends Component {
         <section className="section search-hits">
           <div className="container">
 
-            {/* guide and ad row */}
-            <div id="guide-section">
-              <GuideSection environment={environment} />
-            </div>
-
-            {/* courses with lessons inside of them */}
-            <div id="course-section">
-              <CourseHits environment={environment} />
-            </div>
-
-            {/* essential */}
-            <div id="essential-section">
-              <EssentialHits environment={environment} />
-            </div>
-
-            {/* ad */}
-            <div className="is-flex-centered" style={{ marginTop: '60px' }}>
-              <img alt="Ad" src="https://placeimg.com/728/90/any" className="ad" />
-            </div>
-
-            {/* posts */}
-            <div id="posts-section">
-              <PostHits environment={environment} />
-            </div>
+            {/* guide section is a single guide + ad */}
+            <GuideSection environment={environment} />
+            <CourseHits environment={environment} />
+            <EssentialHits environment={environment} />
+            <Ad />
+            <PostHits environment={environment} />
             
           </div>
         </section>
