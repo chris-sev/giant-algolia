@@ -17,7 +17,7 @@ const InfiniteHits = connectInfiniteHits(({ hits, refine }) => (
       {/* otherwise, show the card */}
       {hits.map((hit, index) => (
         <div key={hit.id} className="column is-3">
-          {(index !== 0 && index % 10 === 0) ? (
+          {(index !== 0 && index % 9 === 0) ? (
             <div className="is-flex-centered">
               <img alt="Ad" src="https://placeimg.com/300/250/any" className="ad" />
             </div>

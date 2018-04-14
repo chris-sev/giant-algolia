@@ -52,6 +52,11 @@ class App extends Component {
               <EssentialHits environment={environment} />
             </div>
 
+            {/* ad */}
+            <div className="is-flex-centered" style={{ marginTop: '60px' }}>
+              <img alt="Ad" src="https://placeimg.com/728/90/any" className="ad" />
+            </div>
+
             {/* posts */}
             <div id="posts-section">
               <PostHits environment={environment} />
