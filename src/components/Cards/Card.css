@@ -12,7 +12,7 @@
     font-size: 18px;
     line-height: 1.5; }
     .card.is-scotch .title a {
-      color: rgba(0, 0, 0, 0.8);
+      color: rgba(0, 0, 0, 0.7);
       transition: 0.3s color; }
       .card.is-scotch .title a:hover {
         color: rgba(0, 0, 0, 0.6); }

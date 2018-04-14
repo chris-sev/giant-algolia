@@ -2,7 +2,9 @@ import React, { Component } from 'react';
 import { 
   InstantSearch, 
   Configure, 
-  Pagination
+  Pagination,
+  ScrollTo, 
+  Hits
 } from 'react-instantsearch/dom';
 
 import 'instantsearch.css/themes/reset.css';
@@ -26,7 +28,7 @@ class App extends Component {
         apiKey="4594f3b07157188f25b3f5a8a7eba04e"
         indexName="content_local">
 
-        <Configure distinct={1} hitsPerPage={6} />
+        <Configure distinct={1} hitsPerPage={12} />
 
         {/* search box */}
         <SearchSection />
@@ -54,8 +56,6 @@ class App extends Component {
             <div id="posts-section">
               <PostHits environment={environment} />
             </div>
-
-            <Pagination />
             
           </div>
         </section>

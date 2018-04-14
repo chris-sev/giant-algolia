@@ -20,14 +20,14 @@ const GuideHits = ({ environment }) => {
   
   return (
     <div className="search-section search-guides">
-
-      <Index indexName={index}>
-        <Configure hitsPerPage={1} />
-        <ScrollTo>
-          <Hits />
-        </ScrollTo>
-      </Index>
-
+      <ScrollTo scrollOn="page">
+        <Index indexName={index}>
+          <Configure hitsPerPage={1} />
+          
+            <Hits />
+          
+        </Index>
+      </ScrollTo>
     </div>
   );
 };

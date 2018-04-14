@@ -4,6 +4,7 @@ body {
 
 .search-hits {
   padding-top: 190px;
+  padding-bottom: 100px;
   position: relative; }
 
 .columns {
@@ -85,3 +86,6 @@ body {
       text-indent: -9999px; }
     .search-box-extras li a {
       color: rgba(0, 0, 0, 0.7); }
+
+.read-more {
+  margin-top: 30px; }

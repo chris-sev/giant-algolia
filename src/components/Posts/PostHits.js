@@ -1,20 +1,29 @@
 import React from 'react';
-import { connectHits } from 'react-instantsearch/connectors';
+import { connectInfiniteHits } from 'react-instantsearch/connectors';
 import PostCard from './PostCard';
+import './PostHits.css';
 
 /**
  * Create the hits loop so we can add our own column and grid classes
  * We're going to group our lessons by their course
  * We'll show a course card and lessons within that card as a list
  */
-const Hits = connectHits(({ hits }) => (
-  <div className="columns is-multiline">
-    {hits.map(hit =>
-      <div key={hit.id} className="column is-3">
-        <PostCard post={hit} />
-      </div>
-    )}
-  </div>
+const InfiniteHits = connectInfiniteHits(({ hits, refine }) => (
+  <React.Fragment>
+    {/* article grid */}
+    <div className="columns is-multiline">
+      {hits.map(hit =>
+        <div key={hit.id} className="column is-3">
+          <PostCard post={hit} />
+        </div>
+      )}
+    </div>
+
+    {/* read more button */}
+    <div className="read-more has-text-centered">
+      <a onClick={refine} className="button is-large is-link is-outlined is-rounded">MOARE</a>
+    </div>
+  </React.Fragment>
 ));
 
 /**
@@ -23,7 +32,7 @@ const Hits = connectHits(({ hits }) => (
 const PostHits = ({ environment }) => (
   <div className="search-section search-posts">
     <h3 className="title section-title">Latest Posts</h3>
-    <Hits />
+    <InfiniteHits />
   </div>
 );
 

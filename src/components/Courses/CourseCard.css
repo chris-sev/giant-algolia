@@ -6,6 +6,7 @@
   .card.is-course .card-content .title {
     margin-bottom: 8px; }
   .card.is-course .card-content p {
+    font-size: 14px;
     color: rgba(0, 0, 0, 0.5); }
   .card.is-course .lesson-list {
     margin-bottom: 20px; }

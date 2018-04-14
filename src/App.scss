@@ -5,6 +5,7 @@ body    {
 
 .search-hits  {
   padding-top: 190px;
+  padding-bottom: 100px;
   position: relative;
 } 
 
@@ -110,4 +111,8 @@ body    {
       color: rgba(#000, 0.7);
     }
   }
+}
+
+.read-more  {
+  margin-top: 30px;
 }
