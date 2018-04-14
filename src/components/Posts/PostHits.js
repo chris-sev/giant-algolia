@@ -7,17 +7,15 @@ import PostCard from './PostCard';
  * We're going to group our lessons by their course
  * We'll show a course card and lessons within that card as a list
  */
-const Hits = connectHits(({ hits }) => {
-  return (
-    <div className="columns is-multiline">
-      {hits.map(hit =>
-        <div key={hit.id} className="column is-4">
-          <PostCard post={hit} />
-        </div>
-      )}
-    </div>
-  )
-});
+const Hits = connectHits(({ hits }) => (
+  <div className="columns is-multiline">
+    {hits.map(hit =>
+      <div key={hit.id} className="column is-3">
+        <PostCard post={hit} />
+      </div>
+    )}
+  </div>
+));
 
 /**
  * The course hits will search the courses index

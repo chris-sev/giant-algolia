@@ -1,5 +1,5 @@
 import React from 'react';
-import { Index, Configure } from "react-instantsearch/dom";
+import { Index, Configure, ScrollTo } from "react-instantsearch/dom";
 import { connectHits } from 'react-instantsearch/connectors';
 import GuideCard from './GuideCard';
 
@@ -23,7 +23,9 @@ const GuideHits = ({ environment }) => {
 
       <Index indexName={index}>
         <Configure hitsPerPage={1} />
-        <Hits />
+        <ScrollTo>
+          <Hits />
+        </ScrollTo>
       </Index>
 
     </div>

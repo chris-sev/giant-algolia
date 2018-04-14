@@ -1,12 +1,17 @@
 import React, { Component } from 'react';
-import { InstantSearch, Configure } from 'react-instantsearch/dom';
+import { 
+  InstantSearch, 
+  Configure, 
+  Pagination
+} from 'react-instantsearch/dom';
+
 import 'instantsearch.css/themes/reset.css';
 import 'bulma/css/bulma.css';
 import './App.css';
 import './components/Cards/Card.css';
 
 import SearchSection from './components/SearchSection';
-import GuideHits from './components/Guides/GuideHits';
+import GuideSection from './components/Guides/GuideSection';
 import CourseHits from './components/Courses/CourseHits';
 import EssentialHits from './components/Posts/EssentialHits';
 import PostHits from './components/Posts/PostHits';
@@ -31,15 +36,8 @@ class App extends Component {
           <div className="container">
 
             {/* guide and ad row */}
-            <div id="guide-section" className="search-section search-guides columns">
-              <div className="column">
-                {/* guides */}
-                <GuideHits environment={environment} />
-              </div>
-              <div className="column is-narrow">
-                {/* ad */}
-                <img alt="Ad" src="https://placeimg.com/300/250/any" className="ad" />
-              </div>
+            <div id="guide-section">
+              <GuideSection environment={environment} />
             </div>
 
             {/* courses with lessons inside of them */}
@@ -56,6 +54,8 @@ class App extends Component {
             <div id="posts-section">
               <PostHits environment={environment} />
             </div>
+
+            <Pagination />
             
           </div>
         </section>
