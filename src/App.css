@@ -89,3 +89,8 @@ body {
 
 .read-more {
   margin-top: 30px; }
+
+.is-flex-centered {
+  display: flex;
+  align-items: center;
+  justify-content: center; }
