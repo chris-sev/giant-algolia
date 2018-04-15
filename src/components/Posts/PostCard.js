@@ -29,8 +29,8 @@ const PostCard = ({ post }) => {
 
         {/* pageviews + comments */}
         <div>
-          <span>{pageviews}</span>
-          <span>{commentCount}</span>
+          <span>{pageviews.toLocaleString()}</span>
+          <span>{commentCount.toLocaleString()}</span>
         </div> 
       </div>
     </div>
