@@ -3,8 +3,8 @@ import { Index } from 'react-instantsearch/dom';
 import { connectMenu, connectInfiniteHits } from 'react-instantsearch/connectors';
 import PostCard from './PostCard';
 
-const VirtualMenu = connectMenu(() => null);
-const ScotchSite = () => <VirtualMenu attribute="site" defaultRefinement="scotch"/>;
+// const VirtualMenu = connectMenu(() => null);
+// const ScotchSite = () => <VirtualMenu attribute="site" defaultRefinement="scotch"/>;
 
 /**
  * Quick component to render an ad
@@ -56,7 +56,8 @@ const PostHits = ({ environment }) => (
     <h3 className="title section-title">Latest Posts</h3>
 
     <Index indexName={`content_${environment}`}>
-      <ScotchSite />
+      {/* <ScotchSite /> */}
+      {/* <VirtualMenu attribute="site" defaultRefinement="scotch" /> */}
       <InfiniteHits />
     </Index>
   </div>
