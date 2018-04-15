@@ -6,6 +6,7 @@ import {
 } from 'react-router-dom';
 import Learn from './containers/Learn';
 import Home from './containers/Home';
+import Authors from './containers/Authors';
 import './App.css';
 import 'bulma/css/bulma.css';
 import './components/Cards/Card.css';
@@ -28,6 +29,7 @@ class App extends React.Component {
               <div className="navbar-start">
                 <Link className="navbar-item" to="/">Home</Link>
                 <Link className="navbar-item" to="/learn">Learn</Link>
+                <Link className="navbar-item" to="/authors">Authors</Link>
               </div>
             </div>
 
@@ -36,6 +38,7 @@ class App extends React.Component {
 
           <Route exact path="/" component={Home}/>
           <Route path="/learn" component={Learn}/>
+          <Route path="/authors" component={Authors}/>
         </React.Fragment>
       </Router>
     );
