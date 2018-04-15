@@ -14,9 +14,10 @@ const convertToMinutes = (time) => {
 /**
  * The main card image for all our course/post cards
  */
-const CardImage = ({ article, showPlayButton }) => {
+const CardImage = ({ article, showPlayButton, showPremium }) => {
   const link        = article.published_url;
-  const hasVideo    = !!article.video_id;
+  const hasVideo    = article.video_id || article.duration;
+  const isPremium   = !article.is_free;
   const imageStyles = {
     backgroundImage: `url('${article.image_thumbnail || article.image}')`
   };
@@ -24,6 +25,16 @@ const CardImage = ({ article, showPlayButton }) => {
   return (
     <a className="card-image" href={link}>
       <div className="image is-2by1" style={imageStyles}></div>
+
+      {/* premium */}
+      {(showPremium && isPremium) && (
+        <span className="free-or-premium tag is-premium is-danger">Premium</span>
+      )}
+
+      {/* free */}
+      {(showPremium && !isPremium) && (
+        <span className="free-or-premium tag is-free is-success">Free</span>
+      )}
 
       {/* the play button */}
       {(showPlayButton && hasVideo) && (

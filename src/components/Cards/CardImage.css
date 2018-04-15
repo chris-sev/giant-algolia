@@ -1,22 +1,33 @@
 .card-image {
   position: relative;
-  padding: 5px; }
+  padding: 5px;
+  padding-bottom: 0; }
+  .card-image:hover .free-or-premium,
+  .card-image:hover .play {
+    opacity: 1; }
   .card-image .image {
     background-size: cover;
     background-position: center center;
     border-radius: 5px; }
+  .card-image .free-or-premium {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    opacity: 0.7;
+    transition: 0.3s opacity; }
   .card-image .play {
     font-size: 14px;
     display: flex;
     align-items: center;
     position: absolute;
-    bottom: 15px;
-    right: 15px;
+    bottom: 5px;
+    right: 10px;
     background: #FFF;
     padding: 8px 10px;
     border-radius: 5px;
     color: #444;
-    opacity: 0.7; }
+    opacity: 0.7;
+    transition: 0.3s opacity; }
     .card-image .play img {
       width: 20px;
       height: 20px;

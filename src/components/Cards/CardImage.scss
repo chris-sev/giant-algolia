@@ -1,6 +1,16 @@
+$card-image-padding: 5px;
+
 .card-image     {
   position: relative;
-  padding: 5px;
+  padding: $card-image-padding;
+  padding-bottom: 0;
+
+  &:hover       {
+    .free-or-premium,
+    .play       {
+      opacity: 1;
+    }
+  }
 
   .image        {
     background-size: cover;
@@ -10,18 +20,27 @@
     border-radius: 5px;
   }
 
+  .free-or-premium  {
+    position: absolute;
+    top: $card-image-padding + 5;
+    right: $card-image-padding + 5;
+    opacity: 0.7;
+    transition: 0.3s opacity;
+  }
+
   .play         {
     font-size: 14px;
     display: flex;
     align-items: center;
     position: absolute;
-    bottom: 15px;
-    right: 15px;
+    bottom: $card-image-padding;
+    right: $card-image-padding + 5;
     background: #FFF;
     padding: 8px 10px;
     border-radius: 5px;
     color: #444;
     opacity: 0.7;
+    transition: 0.3s opacity;
 
     img         {
       width: 20px;
