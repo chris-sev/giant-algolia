@@ -11,10 +11,10 @@ const PostCard = ({ post }) => {
 
   return (
     <div className="card is-scotch is-post">    
-      {/* image */}
+      {/* image -------------------------------------- */}
       <CardImage article={post} />
 
-      {/* content */}
+      {/* content -------------------------------------- */}
       <div className="card-content">
 
         {/* title */}
@@ -22,7 +22,7 @@ const PostCard = ({ post }) => {
 
       </div>
 
-      {/* footer */}
+      {/* footer -------------------------------------- */}
       <div className="card-footer">
         {/* author */}
         <div>
@@ -41,6 +41,7 @@ const PostCard = ({ post }) => {
           </span>
         </div> 
       </div>
+      
     </div>
   )
 };
