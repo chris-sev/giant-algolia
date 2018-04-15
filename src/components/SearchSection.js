@@ -1,9 +1,9 @@
 import React from 'react';
-import { SearchBox } from 'react-instantsearch/dom';
+import SearchBox from './SearchBox';
 import Searchspy from './Searchspy';
 import './SearchSection.css';
 
-const SearchSection = () => (
+export default () => (
   <div className="search-section search-box">
     <div className="container">
       <SearchBox />
@@ -14,5 +14,3 @@ const SearchSection = () => (
     </div>
   </div>
 );
-
-export default SearchSection;
