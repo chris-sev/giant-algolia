@@ -15,8 +15,8 @@ const convertToMinutes = (time) => {
  * The main card image for all our course/post cards
  */
 const CardImage = ({ article, showPlayButton, showPremium }) => {
-  const link        = article.published_url;
-  const hasVideo    = article.video_id || article.duration;
+  const link        = article.published_url || article.link;
+  const hasVideo    = article.video_id || (article.duration > 0);
   const isPremium   = !article.is_free;
   const imageStyles = {
     backgroundImage: `url('${article.image_thumbnail || article.image}')`
