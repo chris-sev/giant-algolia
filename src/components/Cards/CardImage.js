@@ -5,10 +5,9 @@ import './CardImage.css';
  * Quick way to convert seconds to minutes
  */
 const convertToMinutes = (time) => {
-  const minutes = Math.floor(time / 60);
-  const seconds = (time - minutes * 60).toString().padStart(2, '0');
-
-  return `${minutes}:${seconds}`;
+  var date = new Date(null);
+  date.setSeconds(time);
+  return date.toISOString().substr(11, 8);
 };
 
 /**
