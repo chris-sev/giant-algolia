@@ -10,7 +10,7 @@ import PostCard from './PostCard';
  * Quick component to render an ad
  */
 const Ad = () => (
-  <div className="is-flex-centered">
+  <div className="is-flex-centered" style={{ height: '100%' }}>
     <img alt="Ad" src="https://placeimg.com/300/250/any" className="ad" />
   </div>
 );
