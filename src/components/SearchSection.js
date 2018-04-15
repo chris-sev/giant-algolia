@@ -1,6 +1,7 @@
 import React from 'react';
 import { SearchBox } from 'react-instantsearch/dom';
 import Searchspy from './Searchspy';
+import './SearchSection.css';
 
 const SearchSection = () => (
   <div className="section search-section search-box">

@@ -2,11 +2,6 @@ body {
   background: #F5F5F5;
   min-height: 100vh; }
 
-.search-hits {
-  padding-top: 190px;
-  padding-bottom: 100px;
-  position: relative; }
-
 .columns {
   margin-bottom: 0 !important; }
 
@@ -42,56 +37,6 @@ body {
 
 .search-posts .section-title:before {
   background-image: linear-gradient(80deg, #00D8FF, #00A7FF); }
-
-/**
- * -------------------------------------------------------
- * Search box
- * -------------------------------------------------------
- */
-.search-box {
-  position: fixed;
-  left: 0;
-  right: 0;
-  background: #259BEE;
-  z-index: 999;
-  padding-bottom: 10px;
-  padding-top: 15px; }
-  .search-box > .container {
-    position: relative; }
-
-.ais-SearchBox {
-  position: relative; }
-
-.ais-SearchBox-input {
-  width: 100%;
-  background: #FFF;
-  border: none;
-  border-radius: 5px;
-  outline: none;
-  padding: 12px 20px;
-  font-size: 18px;
-  opacity: 0.5;
-  transition: 0.3s ease opacity; }
-  .ais-SearchBox-input:hover {
-    opacity: 0.7; }
-  .ais-SearchBox-input:active, .ais-SearchBox-input:focus {
-    opacity: 0.9;
-    box-shadow: 0 2px 3px rgba(10, 10, 10, 0.1), 0 0 0 1px rgba(10, 10, 10, 0.1); }
-
-.ais-SearchBox-submitIcon,
-.ais-SearchBox-resetIcon {
-  display: none; }
-
-.search-box-extras {
-  padding-top: 10px; }
-  .search-box-extras li {
-    display: none; }
-    .search-box-extras li.is-current {
-      display: block; }
-    .search-box-extras li:first-child {
-      text-indent: -9999px; }
-    .search-box-extras li a {
-      color: rgba(255, 255, 255, 0.7); }
 
 .read-more {
   margin-top: 30px; }
