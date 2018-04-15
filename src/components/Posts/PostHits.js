@@ -1,7 +1,11 @@
 import React from 'react';
-import { connectInfiniteHits } from 'react-instantsearch/connectors';
+import { Index } from 'react-instantsearch/dom';
+import { connectMenu, connectInfiniteHits } from 'react-instantsearch/connectors';
 import PostCard from './PostCard';
 import './PostHits.css';
+
+const VirtualMenu = connectMenu(() => null);
+const ScotchSite = () => <VirtualMenu attribute="site" defaultRefinement="scotch"/>;
 
 /**
  * Quick component to render an ad
@@ -25,10 +29,13 @@ const InfiniteHits = connectInfiniteHits(({ hits, refine }) => (
       {/* otherwise, show the card */}
       {hits.map((hit, index) => (
         <div key={hit.id} className="column is-3">
-          {(index !== 0 && index % 6 === 0) 
-            ? <Ad />
-            : <PostCard post={hit} />
-          }
+        
+          {(index !== 0 && index % 6 === 0) ? (
+            <Ad />
+          ):( 
+            <PostCard post={hit} />
+          )}
+          
         </div>
       ))}      
     </div>
@@ -46,7 +53,11 @@ const InfiniteHits = connectInfiniteHits(({ hits, refine }) => (
 const PostHits = ({ environment }) => (
   <div id="posts-section" className="search-section search-posts">
     <h3 className="title section-title">Latest Posts</h3>
-    <InfiniteHits />
+
+    <Index indexName={`content_${environment}`}>
+      <ScotchSite />
+      <InfiniteHits />
+    </Index>
   </div>
 );
 

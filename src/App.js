@@ -26,7 +26,7 @@ class App extends Component {
       <InstantSearch
         appId="4KRGXPTF7K"
         apiKey="4594f3b07157188f25b3f5a8a7eba04e"
-        indexName="content_local">
+        indexName="users_production">
 
         <Configure distinct={1} hitsPerPage={12} />
 

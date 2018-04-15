@@ -24,6 +24,7 @@ const Hits = connectHits(({ hits }) => (
 const PostHits = ({ environment }) => (
   <div id="essential-section" className="search-section search-essential">
     <h3 className="title section-title">Essential Reading</h3>
+    
     <Index indexName={`essential_${environment}`}>
       <Configure hitsPerPage={6} />
       <Hits />
