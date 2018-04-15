@@ -7,8 +7,9 @@ import {
 import Learn from './containers/Learn';
 import Home from './containers/Home';
 import Authors from './containers/Authors';
-import './App.css';
+
 import 'bulma/css/bulma.css';
+import './App.css';
 import './components/Cards/Card.css';
 
 class App extends React.Component {
