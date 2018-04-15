@@ -15,7 +15,7 @@ const GuideCard = ({ guide }) => {
 
         {/* title */}
         <div>
-          <h3 className="subtitle">The ultimate noob guide to learn</h3>
+          <h3 className="subtitle">The ultimate noob guide to:</h3>
           <h2 className="title"><a href={url}>{title}</a></h2>
         </div>
 

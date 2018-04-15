@@ -16,6 +16,7 @@
       margin-right: 6px;
       margin-top: 1px; }
     .lesson-list .lesson-item .title {
+      font-size: 16px;
       margin: 0;
       color: rgba(0, 0, 0, 0.65); }
     .lesson-list .lesson-item .actions {

@@ -15,7 +15,6 @@ const convertToMinutes = (time) => {
  * The lesson that we'll loop over
  */
 const Lesson = ({ lesson }) => {
-  console.log(lesson);
   const { title } = lesson;
   const url       = lesson.published_url;
   const isFree    = lesson.is_free;

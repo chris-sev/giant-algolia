@@ -4,7 +4,6 @@ import CourseCardLessons from './CourseCardLessons';
 import './CourseCard.css';
 
 const CourseCard = ({ course }) => {
-  console.log(course);
   const { title, link, lessons } = course;
   const lessonCount = course.lesson_count;
 

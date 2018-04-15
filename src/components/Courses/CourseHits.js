@@ -1,6 +1,6 @@
 import React from 'react';
 import { Index, Configure } from "react-instantsearch/dom";
-import { connectHits } from 'react-instantsearch/connectors';
+import { connectInfiniteHits } from 'react-instantsearch/connectors';
 import CourseCard from './CourseCard';
 
 /**
@@ -32,17 +32,24 @@ const groupByCourse = (hits) => {
  * We're going to group our lessons by their course
  * We'll show a course card and lessons within that card as a list
  */
-const Hits = connectHits(({ hits }) => {
+const Hits = connectInfiniteHits(({ hits, refine }) => {
   const courses = groupByCourse(hits);
 
   return (
-    <div className="columns is-multiline">
-      {courses.map(course =>
-        <div key={course.id} className="column is-4">
-          <CourseCard course={course} />
-        </div>
-      )}
-    </div>
+    <React.Fragment>
+      <div className="columns is-multiline">
+        {courses.map(course =>
+          <div key={course.id} className="column is-4">
+            <CourseCard course={course} />
+          </div>
+        )}
+      </div>
+
+      {/* read more button */}
+      <div className="read-more has-text-centered">
+        <a onClick={refine} className="button is-large is-link is-outlined is-rounded">MOARE</a>
+      </div>
+    </React.Fragment>
   )
 });
 

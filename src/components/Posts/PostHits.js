@@ -25,7 +25,7 @@ const InfiniteHits = connectInfiniteHits(({ hits, refine }) => (
       {/* otherwise, show the card */}
       {hits.map((hit, index) => (
         <div key={hit.id} className="column is-3">
-          {(index !== 0 && index % 9 === 0) 
+          {(index !== 0 && index % 6 === 0) 
             ? <Ad />
             : <PostCard post={hit} />
           }

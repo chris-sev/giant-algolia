@@ -25,8 +25,7 @@ const PostHits = ({ environment }) => (
   <div id="essential-section" className="search-section search-essential">
     <h3 className="title section-title">Essential Reading</h3>
     <Index indexName={`essential_${environment}`}>
-      <Configure hitsPerPage={3} distinct={3} />
-
+      <Configure hitsPerPage={6} />
       <Hits />
     </Index>
   </div>
