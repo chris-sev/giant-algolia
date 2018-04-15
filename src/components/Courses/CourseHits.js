@@ -47,7 +47,9 @@ const Hits = connectInfiniteHits(({ hits, refine }) => {
 
       {/* read more button */}
       <div className="read-more has-text-centered">
-        <a onClick={refine} className="button is-large is-link is-outlined is-rounded">MOARE</a>
+        <a onClick={refine} className="button is-large is-link is-outlined is-rounded">
+          MOARE COURSES
+        </a>
       </div>
     </React.Fragment>
   )
