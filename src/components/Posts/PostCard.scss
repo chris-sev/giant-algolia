@@ -1,0 +1,19 @@
+.card.is-post {
+  .title {
+    font-size: 14px;
+    line-height: 1.3;
+  }
+
+  .card-footer  {
+    font-size: 14px;
+    padding: 20px;
+    padding-top: 0;
+    color: rgba(#000, 0.4);
+    display: flex;
+    justify-content: space-between;
+
+    span:not(:last-child) {
+      margin-right: 12px;
+    }
+  }
+}

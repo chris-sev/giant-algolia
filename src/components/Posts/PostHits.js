@@ -2,7 +2,6 @@ import React from 'react';
 import { Index } from 'react-instantsearch/dom';
 import { connectMenu, connectInfiniteHits } from 'react-instantsearch/connectors';
 import PostCard from './PostCard';
-import './PostHits.css';
 
 const VirtualMenu = connectMenu(() => null);
 const ScotchSite = () => <VirtualMenu attribute="site" defaultRefinement="scotch"/>;

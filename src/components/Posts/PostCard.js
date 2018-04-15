@@ -1,12 +1,14 @@
 import React from 'react';
 import CardImage from '../Cards/CardImage';
+import './PostCard.css';
 
 const PostCard = ({ post }) => {
-  const link = post.published_url;
-  const title = post.title || '';
+  const { title, author, pageviews } = post;
+  const link         = post.published_url;
+  const commentCount = post.comment_count;
 
   return (
-    <div className="card is-scotch">    
+    <div className="card is-scotch is-post">    
       {/* image */}
       <CardImage article={post} />
 
@@ -19,6 +21,18 @@ const PostCard = ({ post }) => {
       </div>
 
       {/* footer */}
+      <div class="card-footer">
+        {/* author */}
+        <div>
+          {author.name}
+        </div>
+
+        {/* pageviews + comments */}
+        <div>
+          <span>{pageviews}</span>
+          <span>{commentCount}</span>
+        </div> 
+      </div>
     </div>
   )
 };
