@@ -5,10 +5,8 @@ import playButton from '../../icons/play-button.svg';
 /**
  * Quick way to convert seconds to minutes
  */
-const convertToMinutes = (time) => {
-  var date = new Date(null);
-  date.setSeconds(time);
-  return date.toISOString().substr(11, 8);
+const convertToHours = (seconds) => {
+  return `${(seconds / 3600).toFixed(2)} hours`;
 };
 
 /**
@@ -40,7 +38,7 @@ const CardImage = ({ article, showPlayButton, showPremium }) => {
       {(showPlayButton && hasVideo) && (
         <div className="play">
           <img src={playButton} alt="Play Icon" /> 
-          <span>{convertToMinutes(article.duration)}</span>
+          <span>{convertToHours(article.duration)}</span>
         </div>
       )}
     </a>
