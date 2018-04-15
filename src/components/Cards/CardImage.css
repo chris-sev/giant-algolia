@@ -7,10 +7,19 @@
     border-top-right-radius: 5px; }
   .card-image .play {
     font-size: 14px;
-    display: block;
+    display: flex;
+    align-items: center;
     position: absolute;
     bottom: 15px;
     right: 15px;
     background: #FFF;
-    padding: 5px 10px;
-    border-radius: 5px; }
+    padding: 8px 10px;
+    border-radius: 5px;
+    color: #444;
+    opacity: 0.7; }
+    .card-image .play img {
+      width: 20px;
+      height: 20px;
+      margin-right: 10px; }
+    .card-image .play span {
+      margin-bottom: 1px; }

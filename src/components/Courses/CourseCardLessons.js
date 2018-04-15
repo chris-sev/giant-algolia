@@ -1,5 +1,7 @@
 import React from 'react';
 import './CourseCardLessons.css';
+import playIcon from '../../play-button.svg';
+import readIcon from '../../postcard.svg';
 
 /**
  * Quick way to convert seconds to minutes
@@ -17,15 +19,19 @@ const convertToMinutes = (time) => {
 const Lesson = ({ lesson }) => {
   const { title } = lesson;
   const url       = lesson.published_url;
-  const isFree    = lesson.is_free;
+  const hasVideo  = lesson.video_id;
   const duration  = convertToMinutes(lesson.duration);
 
   return (
     <li>
       <a href={url} className="lesson-item">
-        {/* lock icon */}
-        <div className="lock">
-          <span role="img">{isFree ? '😃' : '🔐'}</span>
+        {/* vieo icon icon */}
+        <div className="video">
+          {hasVideo ? (
+            <img src={playIcon} width="20" height="20" alt="Play Icon" />
+          ):(
+            <img src={readIcon} width="20" height="20" alt="Read Icon" />
+          )}
         </div>
 
         {/* title */}

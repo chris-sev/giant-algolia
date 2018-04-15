@@ -1,5 +1,6 @@
 import React from 'react';
 import './CardImage.css';
+import playButton from '../../play-button.svg';
 
 /**
  * Quick way to convert seconds to minutes
@@ -14,20 +15,22 @@ const convertToMinutes = (time) => {
  * The main card image for all our course/post cards
  */
 const CardImage = ({ article, showPlayButton }) => {
-  console.log(article);
-  const url         = article.published_url;
+  const link        = article.published_url;
+  const hasVideo    = !!article.video_id;
   const imageStyles = {
     backgroundImage: `url('${article.image_thumbnail || article.image}')`
   };
 
+  console.log({ article, hasVideo });
   return (
-    <a className="card-image" href={url}>
+    <a className="card-image" href={link}>
       <div className="image is-2by1" style={imageStyles}></div>
 
       {/* the play button */}
-      {showPlayButton && article.duration && (
+      {(showPlayButton && hasVideo) && (
         <div className="play">
-          {convertToMinutes(article.duration)}
+          <img src={playButton} alt="Play Icon" /> 
+          <span>{convertToMinutes(article.duration)}</span>
         </div>
       )}
     </a>

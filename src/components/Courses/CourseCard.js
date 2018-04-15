@@ -4,7 +4,7 @@ import CourseCardLessons from './CourseCardLessons';
 import './CourseCard.css';
 
 const CourseCard = ({ course }) => {
-  const { title, link, lessons } = course;
+  const { title, link, slug, lessons } = course;
   const lessonCount = course.lesson_count;
 
   return (
@@ -28,7 +28,7 @@ const CourseCard = ({ course }) => {
       {/* footer */}
       <div className="card-footer">
         <p>{lessonCount - 3} more lessons...</p>
-        <a className="button is-outlined is-info is-rounded">Start Course</a>
+        <a className="button is-outlined is-info is-rounded" href={link}>Start Course</a>
       </div>
     </div>
   )

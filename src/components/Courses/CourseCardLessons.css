@@ -12,9 +12,10 @@
       background: #EAF4FA; }
       .lesson-list .lesson-item:hover .title {
         color: #2c84b9; }
-    .lesson-list .lesson-item .lock {
+    .lesson-list .lesson-item .video {
       margin-right: 6px;
-      margin-top: 1px; }
+      margin-top: 2px;
+      opacity: 0.5; }
     .lesson-list .lesson-item .title {
       font-size: 16px;
       margin: 0;
