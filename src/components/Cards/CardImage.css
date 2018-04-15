@@ -1,10 +1,10 @@
 .card-image {
-  position: relative; }
+  position: relative;
+  padding: 5px; }
   .card-image .image {
     background-size: cover;
     background-position: center center;
-    border-top-left-radius: 5px;
-    border-top-right-radius: 5px; }
+    border-radius: 5px; }
   .card-image .play {
     font-size: 14px;
     display: flex;

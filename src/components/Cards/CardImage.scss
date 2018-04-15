@@ -1,11 +1,13 @@
 .card-image     {
   position: relative;
+  padding: 5px;
 
   .image        {
     background-size: cover;
     background-position: center center;
-    border-top-left-radius: 5px;
-    border-top-right-radius: 5px;
+    // border-top-left-radius: 5px;
+    // border-top-right-radius: 5px;
+    border-radius: 5px;
   }
 
   .play         {
