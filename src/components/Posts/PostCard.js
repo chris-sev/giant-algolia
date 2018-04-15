@@ -1,6 +1,8 @@
 import React from 'react';
 import CardImage from '../Cards/CardImage';
 import './PostCard.css';
+import eyeIcon from '../../icons/eye.svg';
+import commentIcon from '../../icons/comment.svg';
 
 const PostCard = ({ post }) => {
   const { title, author, pageviews } = post;
@@ -24,13 +26,19 @@ const PostCard = ({ post }) => {
       <div className="card-footer">
         {/* author */}
         <div>
-          {author.name}
+          <a href={`/@$[author.username}`}>{author.name}</a>
         </div>
 
         {/* pageviews + comments */}
         <div>
-          <span>{pageviews.toLocaleString()}</span>
-          <span>{commentCount.toLocaleString()}</span>
+          <span>
+            <img src={eyeIcon} alt="Icon" width="20" height="10" />
+            {pageviews.toLocaleString()}
+          </span>
+          <span>
+            <img src={commentIcon} alt="Icon" width="20" height="10" />
+            {commentCount.toLocaleString()}
+          </span>
         </div> 
       </div>
     </div>

@@ -1,7 +1,7 @@
 import React from 'react';
 import './CourseCardLessons.css';
-import playIcon from '../../play-button.svg';
-import readIcon from '../../postcard.svg';
+import playIcon from '../../icons/play-button.svg';
+import readIcon from '../../icons/postcard.svg';
 
 /**
  * Quick way to convert seconds to minutes

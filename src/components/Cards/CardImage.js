@@ -1,6 +1,6 @@
 import React from 'react';
 import './CardImage.css';
-import playButton from '../../play-button.svg';
+import playButton from '../../icons/play-button.svg';
 
 /**
  * Quick way to convert seconds to minutes
