@@ -4,7 +4,7 @@ import Searchspy from './Searchspy';
 import './SearchSection.css';
 
 const SearchSection = () => (
-  <div className="section search-section search-box">
+  <div className="search-section search-box">
     <div className="container">
       <SearchBox />
 

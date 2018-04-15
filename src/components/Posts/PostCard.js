@@ -21,7 +21,7 @@ const PostCard = ({ post }) => {
       </div>
 
       {/* footer */}
-      <div class="card-footer">
+      <div className="card-footer">
         {/* author */}
         <div>
           {author.name}

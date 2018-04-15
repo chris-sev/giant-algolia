@@ -21,7 +21,6 @@ const CardImage = ({ article, showPlayButton }) => {
     backgroundImage: `url('${article.image_thumbnail || article.image}')`
   };
 
-  console.log({ article, hasVideo });
   return (
     <a className="card-image" href={link}>
       <div className="image is-2by1" style={imageStyles}></div>
