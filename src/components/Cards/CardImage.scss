@@ -1,26 +1,29 @@
-$card-image-padding: 5px;
+$card-image-padding: 8px;
 
-.card-image     {
+.card-image {
   position: relative;
   padding: $card-image-padding;
   padding-bottom: 0;
-
-  &:hover       {
+  
+  &:hover {
     .free-or-premium,
-    .play       {
+    .play {
       opacity: 1;
     }
   }
 
-  .image        {
+  .image {
     background-size: cover;
     background-position: center center;
     // border-top-left-radius: 5px;
     // border-top-right-radius: 5px;
+    margin-top: -20px;
     border-radius: 5px;
+    box-shadow: 0 10px 40px 0 rgba(62,57,107,0.20), 
+      0 2px 9px 0 rgba(62,57,107,0.20);
   }
 
-  .free-or-premium  {
+  .free-or-premium {
     position: absolute;
     top: $card-image-padding + 5;
     right: $card-image-padding + 5;
@@ -28,27 +31,27 @@ $card-image-padding: 5px;
     transition: 0.3s opacity;
   }
 
-  .play         {
+  .play {
     font-size: 14px;
     display: flex;
     align-items: center;
     position: absolute;
     bottom: $card-image-padding;
     right: $card-image-padding + 5;
-    background: #FFF;
+    background: #fff;
     padding: 8px 10px;
     border-radius: 5px;
     color: #444;
     opacity: 0.7;
     transition: 0.3s opacity;
 
-    img         {
+    img {
       width: 20px;
       height: 20px;
       margin-right: 10px;
     }
 
-    span        {
+    span {
       margin-bottom: 1px;
     }
   }
