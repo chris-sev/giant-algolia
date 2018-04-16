@@ -45,3 +45,8 @@ body {
   display: flex;
   align-items: center;
   justify-content: center; }
+
+.search-essential .column,
+.search-posts .column {
+  padding-top: 20px;
+  padding-bottom: 20px; }

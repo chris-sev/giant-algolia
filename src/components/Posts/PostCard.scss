@@ -3,6 +3,10 @@
   flex-direction: column;
   justify-content: space-between;
 
+  .card-content {
+    padding: 10px 20px 5px;
+  }
+
   .title {
     font-size: 14px;
     line-height: 1.3;
