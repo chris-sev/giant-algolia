@@ -27,7 +27,7 @@ $card-image-padding: 8px;
     // border-top-right-radius: 5px;
     margin-top: -20px;
     border-radius: 5px;
-    transition: 0.2s cubic-bezier(.52,.28,.47,1.15) transform;
+    transition: 0.3s cubic-bezier(.52,.28,.47,1.15) transform;
     box-shadow: 0 10px 40px 0 rgba(62,57,107,0.20), 
       0 2px 9px 0 rgba(62,57,107,0.20);
   }
@@ -37,7 +37,7 @@ $card-image-padding: 8px;
     top: $card-image-padding - 12;
     right: $card-image-padding + 5;
     opacity: 0.7;
-    transition: 0.2s cubic-bezier(.52,.28,.47,1.15) all;
+    transition: 0.3s cubic-bezier(.52,.28,.47,1.15) all;
   }
 
   .play {
@@ -52,7 +52,7 @@ $card-image-padding: 8px;
     border-radius: 5px;
     color: #444;
     opacity: 0.7;
-    transition: 0.2s cubic-bezier(.52,.28,.47,1.15) all;
+    transition: 0.3s cubic-bezier(.52,.28,.47,1.15) all;
 
     img {
       width: 20px;

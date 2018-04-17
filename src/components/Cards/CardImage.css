@@ -15,14 +15,14 @@
     background-position: center center;
     margin-top: -20px;
     border-radius: 5px;
-    transition: 0.2s cubic-bezier(0.52, 0.28, 0.47, 1.15) transform;
+    transition: 0.3s cubic-bezier(0.52, 0.28, 0.47, 1.15) transform;
     box-shadow: 0 10px 40px 0 rgba(62, 57, 107, 0.2), 0 2px 9px 0 rgba(62, 57, 107, 0.2); }
   .card-image .free-or-premium {
     position: absolute;
     top: -4px;
     right: 13px;
     opacity: 0.7;
-    transition: 0.2s cubic-bezier(0.52, 0.28, 0.47, 1.15) all; }
+    transition: 0.3s cubic-bezier(0.52, 0.28, 0.47, 1.15) all; }
   .card-image .play {
     font-size: 14px;
     display: flex;
@@ -35,7 +35,7 @@
     border-radius: 5px;
     color: #444;
     opacity: 0.7;
-    transition: 0.2s cubic-bezier(0.52, 0.28, 0.47, 1.15) all; }
+    transition: 0.3s cubic-bezier(0.52, 0.28, 0.47, 1.15) all; }
     .card-image .play img {
       width: 20px;
       height: 20px;
