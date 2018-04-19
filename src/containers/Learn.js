@@ -1,5 +1,5 @@
 import React from 'react';
-import { InstantSearch, Configure } from 'react-instantsearch/dom';
+import { RefinementList, InstantSearch, Configure } from 'react-instantsearch/dom';
 import 'instantsearch.css/themes/reset.css';
 
 import SearchSection from '../components/SearchSection';
@@ -7,6 +7,7 @@ import GuideSection from '../components/Guides/GuideSection';
 import CourseHits from '../components/Courses/CourseHits';
 import EssentialHits from '../components/Posts/EssentialHits';
 import PostHits from '../components/Posts/PostHits';
+import TagsFilter from '../components/Filters/TagsFilter';
 
 const Ad = () => (
   <div className="is-flex-centered" style={{ marginTop: '60px' }}>
@@ -31,6 +32,9 @@ class Learn extends React.Component {
 
         {/* search hits */}
         <section className="search-hits">
+          
+          {/* <TagsFilter /> */}
+
           <div className="container">
 
             {/* guide section is a single guide + ad */}
