@@ -1,6 +1,6 @@
 import React from 'react';
 import SearchBox from './SearchBox';
-import Searchspy from './Searchspy';
+// import Searchspy from './Searchspy';
 import './SearchSection.css';
 
 export default () => (

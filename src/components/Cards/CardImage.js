@@ -1,6 +1,5 @@
 import React from 'react';
 import './CardImage.css';
-import playButton from '../../icons/play-button.svg';
 import LazyLoad from 'react-lazyload';
 
 /**

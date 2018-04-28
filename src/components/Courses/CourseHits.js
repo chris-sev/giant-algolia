@@ -60,8 +60,7 @@ const Hits = connectInfiniteHits(({ hits, refine }) => {
  * The course hits will search the courses index
  */
 const CourseHits = (props) => {
-  const environment = props.environment;
-  const showHeader  = props.showHeader || true;
+  const { environment, showHeader } = props;
   const hitsPerPage = props.hitsPerPage || 3;
 
   return (

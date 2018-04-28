@@ -4,6 +4,7 @@ import { connectMenu, connectInfiniteHits } from 'react-instantsearch/connectors
 import PostCard from './PostCard';
 import SearchHeader from '../SearchHeader';
 
+// TODO: bring back when we integrate into scotch
 // const VirtualMenu = connectMenu(() => null);
 // const ScotchSite = () => <VirtualMenu attribute="site" defaultRefinement="scotch"/>;
 

@@ -5,7 +5,7 @@ import SearchSection from '../components/SearchSection';
 import CourseHits from '../components/Courses/CourseHits';
 
 const Ad = () => (
-  <div className="is-flex-centered" style={{ marginTop: '60px' }}>
+  <div className="is-flex-centered" style={{ marginTop: '40px' }}>
     <img alt="Ad" src="https://placeimg.com/728/90/any" className="ad" />
   </div>
 );
@@ -21,16 +21,19 @@ export default (props) => {
 
       {/* search box */}
       <SearchSection />
+
+      {/* ad */}
+      <Ad />
       
       {/* hits */}
       <section className="search-hits">
         <div className="container">
-        
+
           <CourseHits 
             hitsPerPage={6} 
             environment={environment} 
             showHeader={false} />
-            
+
         </div>
       </section>
 

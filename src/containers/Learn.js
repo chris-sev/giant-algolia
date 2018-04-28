@@ -1,5 +1,5 @@
 import React from 'react';
-import { RefinementList, InstantSearch, Configure } from 'react-instantsearch/dom';
+import { InstantSearch, Configure } from 'react-instantsearch/dom';
 import 'instantsearch.css/themes/reset.css';
 
 import SearchSection from '../components/SearchSection';
@@ -38,7 +38,7 @@ export default class Learn extends React.Component {
           <div className="container">
             {/* guide section is a single guide + ad */}
             <GuideSection environment={environment} />
-            <CourseHits environment={environment} />
+            <CourseHits environment={environment} showHeader={true} />
             <EssentialHits environment={environment} />
             <Ad />
             <PostHits environment={environment} />
