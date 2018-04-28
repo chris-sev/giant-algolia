@@ -31,9 +31,9 @@
   opacity: 0.3;
   transition: 0.3s ease opacity; }
   .ais-SearchBox-input:hover {
-    opacity: 0.7; }
+    opacity: 0.4; }
   .ais-SearchBox-input:active, .ais-SearchBox-input:focus {
-    opacity: 0.9;
+    opacity: 1;
     box-shadow: 0 2px 3px rgba(10, 10, 10, 0.1), 0 0 0 1px rgba(10, 10, 10, 0.1); }
 
 .ais-SearchBox-submitIcon,

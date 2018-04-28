@@ -61,11 +61,12 @@ const Hits = connectInfiniteHits(({ hits, refine }) => {
  */
 const CourseHits = (props) => {
   const environment = props.environment;
+  const showHeader  = props.showHeader || true;
   const hitsPerPage = props.hitsPerPage || 3;
 
   return (
     <div id="course-section" className="search-section search-courses">
-      <SearchHeader text={'Courses'} />
+      {showHeader && <SearchHeader text={'Courses'} />}
 
       {/* show the courses index */}
       <Index indexName={`lessons_${environment}`}>

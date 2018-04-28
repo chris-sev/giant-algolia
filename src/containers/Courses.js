@@ -25,7 +25,12 @@ export default (props) => {
       {/* hits */}
       <section className="search-hits">
         <div className="container">
-          <CourseHits hitsPerPage={6} environment={environment} />
+        
+          <CourseHits 
+            hitsPerPage={6} 
+            environment={environment} 
+            showHeader={false} />
+            
         </div>
       </section>
 

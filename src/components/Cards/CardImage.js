@@ -4,18 +4,10 @@ import playButton from '../../icons/play-button.svg';
 import LazyLoad from 'react-lazyload';
 
 /**
- * Quick way to convert seconds to minutes
- */
-const convertToHours = (seconds) => {
-  return `${(seconds / 3600).toFixed(2)} hours`;
-};
-
-/**
  * The main card image for all our course/post cards
  */
-const CardImage = ({ article, showPlayButton, showPremium }) => {
+const CardImage = ({ article, showPremium }) => {
   const link        = article.published_url || article.link;
-  const hasVideo    = article.video_id || (article.duration > 0);
   const isPremium   = !article.is_free;
   const imageStyles = {
     backgroundImage: `url('${article.image_thumbnail || article.image}')`
@@ -34,14 +26,6 @@ const CardImage = ({ article, showPlayButton, showPremium }) => {
         {/* free */}
         {(showPremium && !isPremium) && (
           <span className="free-or-premium tag is-free is-success">Free</span>
-        )}
-
-        {/* the play button */}
-        {(showPlayButton && hasVideo) && (
-          <div className="play">
-            <img src={playButton} alt="Play Icon" /> 
-            <span>{convertToHours(article.duration)}</span>
-          </div>
         )}
       </a>
     </LazyLoad>
