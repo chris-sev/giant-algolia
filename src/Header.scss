@@ -1,0 +1,43 @@
+#scotch-nav {
+
+  .navbar-item {
+    transition: 0.3s ease background;
+  }
+
+  // logo
+  .navbar-brand {
+    position: relative;
+    position: fixed;
+    left: 0; 
+    top: 0;
+    height: 90px;
+    z-index: 999;
+
+    .navbar-item {
+      &:hover {
+        background: none;
+
+        img.scotch-logo {
+          transform: scale(1.04);
+        }
+      }
+
+      img.scotch-logo {
+        max-height: inherit !important;
+        will-change: transform;
+        transition: 0.3s cubic-bezier(0.19, 1, 0.22, 1) transform;
+      }
+    }
+  } // navbar-brand
+
+  // menu
+  .navbar-menu {
+    padding-left: 50px; 
+
+    .navbar-item {
+      margin-bottom: 25px;
+      margin-top: 25px;
+      border-radius: 5px;
+    }
+  } // navbar-menu
+}
