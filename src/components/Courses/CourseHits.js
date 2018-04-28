@@ -59,8 +59,9 @@ const Hits = connectInfiniteHits(({ hits, refine }) => {
 /**
  * The course hits will search the courses index
  */
-const CourseHits = ({ environment, hitsPerPage }) => {
-  hitsPerPage = hitsPerPage || 3;
+const CourseHits = (props) => {
+  const environment = props.environment;
+  const hitsPerPage = props.hitsPerPage || 3;
 
   return (
     <div id="course-section" className="search-section search-courses">

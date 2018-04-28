@@ -8,8 +8,8 @@ const Ad = () => (
   </div>
 );
 
-export default () => {
-  const environment = this.props.environment || 'local';
+const Home = (props) => {
+  const environment = props.environment || 'local';
 
   return (
     <InstantSearch
@@ -23,3 +23,5 @@ export default () => {
     </InstantSearch>
   )
 }
+
+export default Home;
