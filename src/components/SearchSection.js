@@ -8,9 +8,9 @@ export default () => (
     <div className="container">
       <SearchBox />
 
-      <div className="search-box-extras">
+      {/* <div className="search-box-extras">
         <Searchspy />
-      </div>
+      </div> */}
     </div>
   </div>
 );

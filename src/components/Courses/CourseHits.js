@@ -59,18 +59,22 @@ const Hits = connectInfiniteHits(({ hits, refine }) => {
 /**
  * The course hits will search the courses index
  */
-const CourseHits = ({ environment }) => (
-  <div id="course-section" className="search-section search-courses">
-    <SearchHeader text={'Courses'} />
+const CourseHits = ({ environment, hitsPerPage }) => {
+  hitsPerPage = hitsPerPage || 3;
 
-    {/* show the courses index */}
-    <Index indexName={`lessons_${environment}`}>
-      <Configure hitsPerPage={3} distinct={3} />
+  return (
+    <div id="course-section" className="search-section search-courses">
+      <SearchHeader text={'Courses'} />
 
-      {/* loop over the hits */}
-      <Hits />
-    </Index>
-  </div>
-);
+      {/* show the courses index */}
+      <Index indexName={`lessons_${environment}`}>
+        <Configure hitsPerPage={hitsPerPage} distinct={3} />
+
+        {/* loop over the hits */}
+        <Hits />
+      </Index>
+    </div>
+  )
+};
 
 export default CourseHits;

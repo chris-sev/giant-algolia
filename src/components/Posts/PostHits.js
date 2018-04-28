@@ -56,7 +56,7 @@ const PostHits = ({ environment }) => (
   <Index indexName={`content_${environment}`}>
     <div id="posts-section" className="search-section search-posts">
       <SearchHeader text={'Latest Posts'}>
-        <Menu attribute="difficulty" />        
+        {/* <Menu attribute="difficulty" />         */}
       </SearchHeader>
 
       {/* <ScotchSite /> */}

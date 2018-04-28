@@ -1,21 +1,25 @@
 .search-section {
-  margin-bottom: 60px;
 }
 
 .search-hits  {
-  padding-top: 190px;
-  padding-bottom: 100px;
+  padding-top: 30px;
+  padding-bottom: 30px;
   position: relative;
+
+  &.is-large {
+    padding-top: 80px;
+    padding-bottom: 100px;   
+  }
 }
 
 .search-box     {
-  position: fixed;
-  left: 0;
-  right: 0;
-  background: lighten(#363636, 5%);
-  z-index: 999;
-  padding-bottom: 10px;
-  padding-top: 15px;
+  // position: fixed;
+  // left: 0;
+  // right: 0;
+  // z-index: 999;
+  background: linear-gradient(141deg,#04a6d7 0,#209cee 71%,#3287f5 100%);
+  padding-bottom: 50px;
+  padding-top: 45px;
 
   > .container  {
     position: relative;
@@ -32,7 +36,7 @@
   border: none;
   border-radius: 5px;
   outline: none;
-  padding: 12px 20px;
+  padding: 20px 32px;
   font-size: 18px;
   opacity: 0.3;
   transition: 0.3s ease opacity;

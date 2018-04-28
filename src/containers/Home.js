@@ -8,22 +8,18 @@ const Ad = () => (
   </div>
 );
 
-class Home extends React.Component {
-  render() {
-    const environment = this.props.environment || 'local';
+export default () => {
+  const environment = this.props.environment || 'local';
 
-    return (
-      <InstantSearch
-        appId="4KRGXPTF7K"
-        apiKey="4594f3b07157188f25b3f5a8a7eba04e"
-        indexName="users_production_tmp">
+  return (
+    <InstantSearch
+      appId="4KRGXPTF7K"
+      apiKey="4594f3b07157188f25b3f5a8a7eba04e"
+      indexName="users_production_tmp">
 
-        {/* <Configure distinct={1} hitsPerPage={12} /> */}
+      {/* <Configure distinct={1} hitsPerPage={12} /> */}
 
-        home page
-      </InstantSearch>
-    );
-  }
+      home page
+    </InstantSearch>
+  )
 }
-
-export default Home;

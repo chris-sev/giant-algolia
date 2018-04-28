@@ -4,8 +4,12 @@ import {
   Route,
   Link
 } from 'react-router-dom';
-import Learn from './containers/Learn';
+
 import Home from './containers/Home';
+import Guides from './containers/Guides';
+import Courses from './containers/Courses';
+import Posts from './containers/Posts';
+import Learn from './containers/Learn';
 import Authors from './containers/Authors';
 
 import 'bulma/css/bulma.css';
@@ -18,7 +22,7 @@ class App extends React.Component {
       <Router>
         <React.Fragment>
           <nav className="navbar is-dark is-fixed-top">
-          <div className="container">
+          <div className="container is-fluid">
             
             {/* logo */}
             <div className="navbar-brand">
@@ -29,10 +33,13 @@ class App extends React.Component {
             <div className="navbar-menu">
               <div className="navbar-start">
                 <Link className="navbar-item" to="/">Home</Link>
+                <Link className="navbar-item" to="/guides">Guides</Link>
+                <Link className="navbar-item" to="/courses">Courses</Link>
+                <Link className="navbar-item" to="/posts">Posts</Link>
+              </div>
+              <div className="navbar-end">
                 <Link className="navbar-item" to="/learn">Learn</Link>
-                <Link className="navbar-item" to="/learn">Guides</Link>
-                <Link className="navbar-item" to="/learn">Courses</Link>
-                <Link className="navbar-item" to="/learn">Posts</Link>
+                <Link className="navbar-item" to="/search">Search</Link>
                 <Link className="navbar-item" to="/authors">Authors</Link>
               </div>
             </div>
@@ -40,9 +47,14 @@ class App extends React.Component {
           </div>
           </nav>
 
-          <Route exact path="/" component={Home}/>
-          <Route path="/learn" component={Learn}/>
-          <Route path="/authors" component={Authors}/>
+          {/* define our routes */}
+          <Route exact path="/" component={Home} />
+          <Route path="/guides" component={Guides} />
+          <Route path="/courses" component={Courses} />
+          <Route path="/posts" component={Posts} />
+          <Route path="/learn" component={Learn} />
+          <Route path="/search" component={Learn} />
+          <Route path="/authors" component={Authors} />
         </React.Fragment>
       </Router>
     );

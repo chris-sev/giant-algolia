@@ -15,7 +15,7 @@ const Ad = () => (
   </div>
 );
 
-class Learn extends React.Component {
+export default class Learn extends React.Component {
   render() {
     const environment = this.props.environment || 'local';
 
@@ -31,19 +31,17 @@ class Learn extends React.Component {
         <SearchSection />
 
         {/* search hits */}
-        <section className="search-hits">
+        <section className="search-hits is-large">
           
           {/* <TagsFilter /> */}
 
           <div className="container">
-
             {/* guide section is a single guide + ad */}
             <GuideSection environment={environment} />
             <CourseHits environment={environment} />
             <EssentialHits environment={environment} />
             <Ad />
             <PostHits environment={environment} />
-            
           </div>
         </section>
 
@@ -51,5 +49,3 @@ class Learn extends React.Component {
     );
   }
 }
-
-export default Learn;
