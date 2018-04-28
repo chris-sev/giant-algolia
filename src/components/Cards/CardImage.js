@@ -1,6 +1,7 @@
 import React from 'react';
 import './CardImage.css';
 import playButton from '../../icons/play-button.svg';
+import LazyLoad from 'react-lazyload';
 
 /**
  * Quick way to convert seconds to minutes
@@ -21,27 +22,29 @@ const CardImage = ({ article, showPlayButton, showPremium }) => {
   };
 
   return (
-    <a className="card-image" href={link}>
-      <div className="image is-2by1" style={imageStyles}></div>
+    <LazyLoad height={200} offset={200}>
+      <a className="card-image" href={link}>
+        <div className="image is-2by1" style={imageStyles}></div>
 
-      {/* premium */}
-      {(showPremium && isPremium) && (
-        <span className="free-or-premium tag is-premium is-danger">Premium</span>
-      )}
+        {/* premium */}
+        {(showPremium && isPremium) && (
+          <span className="free-or-premium tag is-premium is-danger">Premium</span>
+        )}
 
-      {/* free */}
-      {(showPremium && !isPremium) && (
-        <span className="free-or-premium tag is-free is-success">Free</span>
-      )}
+        {/* free */}
+        {(showPremium && !isPremium) && (
+          <span className="free-or-premium tag is-free is-success">Free</span>
+        )}
 
-      {/* the play button */}
-      {(showPlayButton && hasVideo) && (
-        <div className="play">
-          <img src={playButton} alt="Play Icon" /> 
-          <span>{convertToHours(article.duration)}</span>
-        </div>
-      )}
-    </a>
+        {/* the play button */}
+        {(showPlayButton && hasVideo) && (
+          <div className="play">
+            <img src={playButton} alt="Play Icon" /> 
+            <span>{convertToHours(article.duration)}</span>
+          </div>
+        )}
+      </a>
+    </LazyLoad>
   )
 };
 

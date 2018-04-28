@@ -12,23 +12,6 @@ body {
   border-radius: 5px;
   box-shadow: 0 2px 3px rgba(10, 10, 10, 0.1), 0 0 0 1px rgba(10, 10, 10, 0.1); }
 
-.section-title {
-  margin-top: 60px;
-  font-family: 'IBM Plex Sans';
-  color: rgba(0, 0, 0, 0.7);
-  font-size: 30px;
-  position: relative;
-  display: flex;
-  align-items: center; }
-  .section-title:before {
-    content: '';
-    display: block;
-    border-radius: 50%;
-    width: 15px;
-    height: 15px;
-    margin-top: 1px;
-    margin-right: 10px; }
-
 .search-courses .section-title:before {
   background-image: linear-gradient(80deg, #fc4a1a, #f7b733); }
 
@@ -51,3 +34,29 @@ body {
 .search-posts .column {
   padding-top: 20px;
   padding-bottom: 20px; }
+
+/**
+ * Search filters (refinement list) 
+ */
+ul.ais-Menu-list {
+  height: 100%;
+  display: flex;
+  align-items: flex-end;
+  padding-bottom: 3px; }
+
+li.ais-Menu-item.ais-Menu-item--selected .ais-Menu-link {
+  background: rgba(0, 0, 0, 0.12) !important;
+  color: rgba(0, 0, 0, 0.95) !important; }
+
+a.ais-Menu-link {
+  display: block;
+  background: rgba(0, 0, 0, 0.03);
+  color: rgba(0, 0, 0, 0.6);
+  border-radius: 50px;
+  margin-right: 8px;
+  padding: 7px 25px;
+  transition: 0.3s all;
+  will-change: background, color;
+  cursor: pointer; }
+  a.ais-Menu-link:hover {
+    background: rgba(0, 0, 0, 0.08); }

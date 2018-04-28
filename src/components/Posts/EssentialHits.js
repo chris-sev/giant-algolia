@@ -2,6 +2,7 @@ import React from 'react';
 import { Index, Configure } from "react-instantsearch/dom";
 import { connectHits } from 'react-instantsearch/connectors';
 import PostCard from './PostCard';
+import SearchHeader from '../SearchHeader';
 
 /**
  * Create the hits loop so we can add our own column and grid classes
@@ -23,7 +24,7 @@ const Hits = connectHits(({ hits }) => (
  */
 const PostHits = ({ environment }) => (
   <div id="essential-section" className="search-section search-essential">
-    <h3 className="title section-title">Essential Reading</h3>
+    <SearchHeader text={'Essential Reading'} />
     
     <Index indexName={`essential_${environment}`}>
       <Configure hitsPerPage={6} />

@@ -1,0 +1,24 @@
+/**
+ * Section headers
+ */
+.section-header {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 40px; }
+  .section-header .section-title {
+    margin-top: 60px;
+    margin-bottom: 0 !important;
+    font-family: 'IBM Plex Sans';
+    color: rgba(0, 0, 0, 0.7);
+    font-size: 30px;
+    position: relative;
+    display: flex;
+    align-items: center; }
+    .section-header .section-title:before {
+      content: '';
+      display: block;
+      border-radius: 50%;
+      width: 15px;
+      height: 15px;
+      margin-top: 1px;
+      margin-right: 10px; }

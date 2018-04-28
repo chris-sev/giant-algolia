@@ -2,6 +2,7 @@ import React from 'react';
 import { Index, Configure } from "react-instantsearch/dom";
 import { connectInfiniteHits } from 'react-instantsearch/connectors';
 import CourseCard from './CourseCard';
+import SearchHeader from '../SearchHeader';
 
 /**
  * We want to group lessons by course
@@ -60,7 +61,7 @@ const Hits = connectInfiniteHits(({ hits, refine }) => {
  */
 const CourseHits = ({ environment }) => (
   <div id="course-section" className="search-section search-courses">
-    <h3 className="title section-title">Courses</h3>
+    <SearchHeader text={'Courses'} />
 
     {/* show the courses index */}
     <Index indexName={`lessons_${environment}`}>

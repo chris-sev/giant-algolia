@@ -1,7 +1,8 @@
 import React from 'react';
-import { Index, RefinementList } from 'react-instantsearch/dom';
+import { Index, Menu } from 'react-instantsearch/dom';
 import { connectMenu, connectInfiniteHits } from 'react-instantsearch/connectors';
 import PostCard from './PostCard';
+import SearchHeader from '../SearchHeader';
 
 // const VirtualMenu = connectMenu(() => null);
 // const ScotchSite = () => <VirtualMenu attribute="site" defaultRefinement="scotch"/>;
@@ -54,10 +55,9 @@ const InfiniteHits = connectInfiniteHits(({ hits, refine }) => (
 const PostHits = ({ environment }) => (
   <Index indexName={`content_${environment}`}>
     <div id="posts-section" className="search-section search-posts">
-      <div className="section-header">
-        <h3 className="title section-title">Latest Posts</h3>
-        <RefinementList attribute="difficulty" /> 
-      </div>
+      <SearchHeader text={'Latest Posts'}>
+        <Menu attribute="difficulty" />        
+      </SearchHeader>
 
       {/* <ScotchSite /> */}
       {/* <VirtualMenu attribute="site" defaultRefinement="scotch" /> */}
