@@ -10,7 +10,7 @@ import PostHits from '../components/Posts/PostHits';
 import TagsFilter from '../components/Filters/TagsFilter';
 
 const Ad = () => (
-  <div className="is-flex-centered" style={{ marginTop: '60px' }}>
+  <div className="is-flex-centered" style={{ marginTop: '30px', marginBottom: '50px' }}>
     <img alt="Ad" src="https://placeimg.com/728/90/any" className="ad" />
   </div>
 );

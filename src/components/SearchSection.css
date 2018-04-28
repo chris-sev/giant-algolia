@@ -1,16 +1,20 @@
+.search-section:not(:last-child) {
+  margin-bottom: 50px !important; }
+
 .search-hits {
-  padding-top: 30px;
-  padding-bottom: 30px;
+  padding-top: 60px;
+  padding-bottom: 70px;
   position: relative; }
   .search-hits.is-large {
     padding-top: 80px;
     padding-bottom: 100px; }
 
-.search-box {
+.search-box.search-section {
   background: linear-gradient(141deg, #04a6d7 0, #209cee 71%, #3287f5 100%);
   padding-bottom: 50px;
-  padding-top: 45px; }
-  .search-box > .container {
+  padding-top: 45px;
+  margin-bottom: 0 !important; }
+  .search-box.search-section > .container {
     position: relative; }
 
 .ais-SearchBox {

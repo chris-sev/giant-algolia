@@ -1,9 +1,10 @@
-.search-section {
+.search-section:not(:last-child) {
+  margin-bottom: 50px !important;
 }
 
 .search-hits  {
-  padding-top: 30px;
-  padding-bottom: 30px;
+  padding-top: 60px;
+  padding-bottom: 70px;
   position: relative;
 
   &.is-large {
@@ -12,7 +13,7 @@
   }
 }
 
-.search-box     {
+.search-box.search-section     {
   // position: fixed;
   // left: 0;
   // right: 0;
@@ -20,6 +21,7 @@
   background: linear-gradient(141deg,#04a6d7 0,#209cee 71%,#3287f5 100%);
   padding-bottom: 50px;
   padding-top: 45px;
+  margin-bottom: 0 !important;
 
   > .container  {
     position: relative;
