@@ -15,37 +15,37 @@ const Ad = () => (
   </div>
 );
 
-export default class Learn extends React.Component {
-  render() {
-    const environment = this.props.environment || 'local';
+const Learn = (props) => {
+  const environment = props.environment || 'local';
 
-    return (
-      <InstantSearch
-        appId="4KRGXPTF7K"
-        apiKey="4594f3b07157188f25b3f5a8a7eba04e"
-        indexName="users_production">
+  return (
+    <InstantSearch
+      appId="4KRGXPTF7K"
+      apiKey="4594f3b07157188f25b3f5a8a7eba04e"
+      indexName="users_production">
 
-        <Configure distinct={1} hitsPerPage={12} />
+      <Configure distinct={1} hitsPerPage={12} />
 
-        {/* search box */}
-        <SearchSection />
+      {/* search box */}
+      <SearchSection />
 
-        {/* search hits */}
-        <section className="search-hits is-large">
-          
-          {/* <TagsFilter /> */}
+      {/* search hits */}
+      <section className="search-hits is-large">
+        
+        {/* <TagsFilter /> */}
 
-          <div className="container">
-            {/* guide section is a single guide + ad */}
-            <GuideSection environment={environment} />
-            <CourseHits environment={environment} showHeader={true} />
-            <EssentialHits environment={environment} />
-            <Ad />
-            <PostHits environment={environment} />
-          </div>
-        </section>
+        <div className="container">
+          {/* guide section is a single guide + ad */}
+          <GuideSection environment={environment} />
+          <CourseHits environment={environment} showHeader={true} />
+          <EssentialHits environment={environment} />
+          <Ad />
+          <PostHits environment={environment} />
+        </div>
+      </section>
 
-      </InstantSearch>
-    );
-  }
+    </InstantSearch>
+  )
 }
+
+export default Learn;

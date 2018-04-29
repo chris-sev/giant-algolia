@@ -2,7 +2,7 @@ import React from 'react';
 import './NavSearchBox.css';
 
 const NavSearchBox = () => (
-  <form class="search-form" action="/search" method="GET">
+  <form className="search-form" action="/search" method="GET">
     <input type="search" name="q" />
 
     {/* <button type="submit" class="aa-input-icon"> 
