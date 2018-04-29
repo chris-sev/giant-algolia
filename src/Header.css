@@ -1,34 +1,49 @@
 #scotch-nav .navbar-item {
   transition: 0.3s ease background; }
 
-#scotch-nav .navbar-brand {
-  position: relative;
-  padding-left: 75px; }
-  #scotch-nav .navbar-brand .navbar-item {
-    text-transform: uppercase;
-    letter-spacing: 2.4px;
-    color: rgba(255, 255, 255, 0.9); }
-    #scotch-nav .navbar-brand .navbar-item:hover {
-      background: none; }
-      #scotch-nav .navbar-brand .navbar-item:hover img.scotch-logo {
-        transform: scale(1.04); }
-    #scotch-nav .navbar-brand .navbar-item img.scotch-logo {
-      background: rgba(25, 25, 25, 0.8);
-      border-radius: 5px;
-      position: fixed;
-      left: 10px;
-      top: 10px;
-      height: 90px;
-      z-index: 999;
-      max-height: inherit !important;
-      will-change: transform;
-      transition: 0.3s cubic-bezier(0.19, 1, 0.22, 1) transform; }
-
-#scotch-nav .navbar-menu .navbar-item {
-  margin-bottom: 25px;
-  margin-top: 25px;
+#scotch-nav .navbar-brand .navbar-item {
+  background: none;
   border-radius: 5px;
-  color: rgba(255, 255, 255, 0.6);
-  transition: 0.3s all; }
-  #scotch-nav .navbar-menu .navbar-item:hover {
-    color: rgba(255, 255, 255, 0.8); }
+  position: fixed;
+  left: 10px;
+  top: 10px;
+  z-index: 999;
+  padding: 0;
+  overflow: hidden;
+  text-transform: uppercase;
+  letter-spacing: 2.4px; }
+  #scotch-nav .navbar-brand .navbar-item:hover img.scotch-logo {
+    border-radius: 5px; }
+  #scotch-nav .navbar-brand .navbar-item:hover span.logo-text {
+    transform: translateX(-100%); }
+  #scotch-nav .navbar-brand .navbar-item img.scotch-logo,
+  #scotch-nav .navbar-brand .navbar-item span.logo-text {
+    background: #282828;
+    height: 90px;
+    display: flex;
+    align-items: center;
+    transition: 0.2s cubic-bezier(0.23, 1, 0.32, 1) all; }
+  #scotch-nav .navbar-brand .navbar-item img.scotch-logo {
+    height: 90px;
+    max-height: inherit !important;
+    will-change: transform;
+    transition: 0.3s cubic-bezier(0.19, 1, 0.22, 1) transform;
+    z-index: 999;
+    border-top-left-radius: 5px;
+    border-bottom-left-radius: 5px; }
+  #scotch-nav .navbar-brand .navbar-item span.logo-text {
+    padding: 0 20px 0 10px;
+    border-top-right-radius: 5px;
+    border-bottom-right-radius: 5px;
+    z-index: 888; }
+
+#scotch-nav .navbar-menu {
+  padding-left: 180px; }
+  #scotch-nav .navbar-menu .navbar-item {
+    margin-bottom: 25px;
+    margin-top: 25px;
+    border-radius: 5px;
+    color: rgba(255, 255, 255, 0.6);
+    transition: 0.3s all; }
+    #scotch-nav .navbar-menu .navbar-item:hover {
+      color: rgba(255, 255, 255, 0.8); }

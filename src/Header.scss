@@ -6,39 +6,64 @@
 
   // logo
   .navbar-brand {
-    position: relative;
-    padding-left: 75px;
-
     .navbar-item {
+      background: none;
+      border-radius: 5px;
+      position: fixed;
+      left: 10px; 
+      top: 10px;
+      z-index: 999;
+      padding: 0;
+      overflow: hidden;
+
       text-transform: uppercase;
       letter-spacing: 2.4px;
-      color: rgba(#FFF, 0.9);
 
       &:hover {
-        background: none;
-
+        // img.scotch-logo {
+          // transform: scale(1.04);
+        // }
         img.scotch-logo {
-          transform: scale(1.04);
+          border-radius: 5px;
         }
+        span.logo-text  {
+          transform: translateX(-100%); 
+        }
+      } // &:hover
+
+      img.scotch-logo,
+      span.logo-text {
+        background: #282828;
+        height: 90px;
+        display: flex;
+        align-items: center;
+        transition: 0.2s cubic-bezier(0.23, 1, 0.320, 1) all;
       }
 
       img.scotch-logo {
-        background: rgba(#191919, 0.8);
-        border-radius: 5px;
-        position: fixed;
-        left: 10px; 
-        top: 10px;
-        height: 90px;
-        z-index: 999;
+        height: 90px; 
         max-height: inherit !important;
         will-change: transform;
         transition: 0.3s cubic-bezier(0.19, 1, 0.22, 1) transform;
+        z-index: 999;
+        border-top-left-radius: 5px;
+        border-bottom-left-radius: 5px;
+      } // img.scotch-logo
+
+      span.logo-text {
+        padding: 0 20px 0 10px;
+        border-top-right-radius: 5px;
+        border-bottom-right-radius: 5px;
+        z-index: 888;
       }
-    }
+
+    } // navbar-item
   } // navbar-brand
 
   // menu
   .navbar-menu {
+    padding-left: 180px;
+
     .navbar-item {
       margin-bottom: 25px;
       margin-top: 25px;

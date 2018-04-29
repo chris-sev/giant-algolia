@@ -30,7 +30,7 @@ const App = () => (
         <div className="navbar-brand">
           <Link className="navbar-item" to="/">
             <img className="scotch-logo" src={logo} width="80" />
-            Scotch
+            <span class="logo-text">Scotch</span>
           </Link>
         </div>
 
