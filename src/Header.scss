@@ -7,9 +7,13 @@
   // logo
   .navbar-brand {
     position: relative;
-    padding-left: 50px;
+    padding-left: 75px;
 
     .navbar-item {
+      text-transform: uppercase;
+      letter-spacing: 2.4px;
+      color: rgba(#FFF, 0.9);
+
       &:hover {
         background: none;
 
@@ -19,9 +23,11 @@
       }
 
       img.scotch-logo {
+        background: rgba(#000, 0.7);
+        border-radius: 5px;
         position: fixed;
-        left: 0; 
-        top: 0;
+        left: 10px; 
+        top: 10px;
         height: 90px;
         z-index: 999;
         max-height: inherit !important;

@@ -3,20 +3,26 @@
 
 #scotch-nav .navbar-brand {
   position: relative;
-  padding-left: 50px; }
-  #scotch-nav .navbar-brand .navbar-item:hover {
-    background: none; }
-    #scotch-nav .navbar-brand .navbar-item:hover img.scotch-logo {
-      transform: scale(1.04); }
-  #scotch-nav .navbar-brand .navbar-item img.scotch-logo {
-    position: fixed;
-    left: 0;
-    top: 0;
-    height: 90px;
-    z-index: 999;
-    max-height: inherit !important;
-    will-change: transform;
-    transition: 0.3s cubic-bezier(0.19, 1, 0.22, 1) transform; }
+  padding-left: 75px; }
+  #scotch-nav .navbar-brand .navbar-item {
+    text-transform: uppercase;
+    letter-spacing: 2.4px;
+    color: rgba(255, 255, 255, 0.9); }
+    #scotch-nav .navbar-brand .navbar-item:hover {
+      background: none; }
+      #scotch-nav .navbar-brand .navbar-item:hover img.scotch-logo {
+        transform: scale(1.04); }
+    #scotch-nav .navbar-brand .navbar-item img.scotch-logo {
+      background: rgba(0, 0, 0, 0.7);
+      border-radius: 5px;
+      position: fixed;
+      left: 10px;
+      top: 10px;
+      height: 90px;
+      z-index: 999;
+      max-height: inherit !important;
+      will-change: transform;
+      transition: 0.3s cubic-bezier(0.19, 1, 0.22, 1) transform; }
 
 #scotch-nav .navbar-menu .navbar-item {
   margin-bottom: 25px;
