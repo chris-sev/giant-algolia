@@ -13,7 +13,7 @@
       #scotch-nav .navbar-brand .navbar-item:hover img.scotch-logo {
         transform: scale(1.04); }
     #scotch-nav .navbar-brand .navbar-item img.scotch-logo {
-      background: rgba(0, 0, 0, 0.7);
+      background: rgba(25, 25, 25, 0.8);
       border-radius: 5px;
       position: fixed;
       left: 10px;
